@@ -677,14 +677,14 @@ public class GClientFrame extends JFrame implements Constants, OperatorPlayedLis
     public void startEdition() {
         final Iterator it_pane = this.operationPaneList.iterator();
         while (it_pane.hasNext()) {
-            ((GClientFrame) it_pane.next()).startEdition();
+            ((OperationPane) it_pane.next()).startEdition();
         }
     }
     
     public void stopEdition() {
         final Iterator it_pane = this.operationPaneList.iterator();
         while (it_pane.hasNext()) {
-            ((GClientFrame) it_pane.next()).stopEdition();
+            ((OperationPane) it_pane.next()).stopEdition();
         }
     }
     
