@@ -43,7 +43,9 @@ public abstract class Animator extends Robot
         if (xmlDoc.getRootElement().getName().equals("OrderBook")) {
             final OrderBook ob = new OrderBook();
             ob.initFromNetworkInput(xmlDoc.getRootElement());
-            this.getMySchedulers().get(ob.getInstitution()).cancel();
+            
+            if( !this.getMySchedulers().isEmpty())
+            	this.getMySchedulers().get(ob.getInstitution()).cancel();
             this.getMySchedulers().put(ob.getInstitution(), new Timer());
             if (this.isOrdersAllowed() && this.isHasToRun()) {
                 final long Delay = this.BasicNextWakeUp();

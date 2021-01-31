@@ -1,0 +1,2503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JessXSetup>
+  <GeneralParameters>
+    <WorkingDirectory>C:\Projects\Virtual Investor</WorkingDirectory>
+    <SetupFileName>Internal Experiment</SetupFileName>
+    <XMLVersion>1.6</XMLVersion>
+    <LoggingFileName>INTERNALEXPERIMENT Log 1.xml</LoggingFileName>
+    <PeriodNumber>100</PeriodNumber>
+    <PeriodDuration>1800</PeriodDuration>
+    <InterestRate periodCount="100">
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.2" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.5" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+      <PeriodRate Rate="0.0" />
+    </InterestRate>
+    <JoiningAfterStartup>false</JoiningAfterStartup>
+  </GeneralParameters>
+  <Asset type="Stock" name="7UP">
+    <DividendModel periodCount="100" biggestWindow="FOLLOWER" size="20">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="AABS">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="AACIL">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="AASM">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="AKBL">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="ALFT">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="ALICO">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="ATEL">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="BELA">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="COTT">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="DADX">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="DEL">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="EFUL">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="FDIBL">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="FISM">
+    <DividendModel periodCount="100">
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="MSFT">
+    <DividendModel periodCount="100">
+      <Dividend mean="50.0" variance="10.0" />
+      <Dividend mean="50.0" variance="20.0" />
+      <Dividend mean="50.0" variance="30.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+      <Dividend mean="0.0" variance="0.0" />
+    </DividendModel>
+  </Asset>
+  <Institution type="OrderMarket" name="KSE" quotedAsset="BELA">
+    <KeepOrderBook allow="true" />
+    <OperationsCost>
+      <Operation name="Market Order" percentageCost="0.04" minimalCost="0.0" />
+      <Operation name="Delete Order" percentageCost="0.04" minimalCost="0.0" />
+      <Operation name="Limit Order" percentageCost="0.04" minimalCost="0.0" />
+      <Operation name="Best Limit Order" percentageCost="0.04" minimalCost="0.0" />
+    </OperationsCost>
+    <Operators>
+      <Operator name="Brokkerman1" orderbookVisibility="5">
+        <GrantedOperation name="Market Order" />
+        <GrantedOperation name="Delete Order" />
+        <GrantedOperation name="Limit Order" />
+        <GrantedOperation name="Best Limit Order" />
+      </Operator>
+      <Operator name="Brooker2" orderbookVisibility="5">
+        <GrantedOperation name="Market Order" />
+        <GrantedOperation name="Delete Order" />
+        <GrantedOperation name="Limit Order" />
+        <GrantedOperation name="Best Limit Order" />
+      </Operator>
+    </Operators>
+  </Institution>
+  <Scenario>
+    <PlayerType name="FOLLOWER">
+      <OperatorsPlayed />
+      <Portfolio cash="5000.0">
+        <Owning asset="BELA" qtty="1" />
+        <Owning asset="DADX" qtty="1" />
+        <Owning asset="AKBL" qtty="1" />
+        <Owning asset="FDIBL" qtty="10" />
+        <Owning asset="ALFT" qtty="1" />
+        <Owning asset="EFUL" qtty="1" />
+        <Owning asset="ATEL" qtty="0" />
+        <Owning asset="DEL" qtty="0" />
+        <Owning asset="AACIL" qtty="0" />
+        <Owning asset="FISM" qtty="0" />
+        <Owning asset="ALICO" qtty="0" />
+        <Owning asset="AABS" qtty="0" />
+        <Owning asset="COTT" qtty="0" />
+        <Owning asset="MSFT" qtty="0" />
+        <Owning asset="7UP" qtty="0" />
+        <Owning asset="AASM" qtty="0" />
+      </Portfolio>
+      <DividendInfo asset="BELA">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="DADX">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AKBL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="FDIBL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ALFT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="EFUL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ATEL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AACIL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="DEL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="FISM">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ALICO">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AABS">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="COTT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="7UP">
+        <DividendDetailledProperties value="Dividends shown for the experiment" />
+        <WindowSize value="20" />
+        <DisplayWindowSize value="true" />
+        <DisplaySessionLength value="true" />
+        <DisplayHoldingValueForExperiment value="true" />
+        <DisplayHoldingValueForWindow value="true" />
+        <DisplayOperationsCosts value="true" />
+      </DividendInfo>
+      <DividendInfo asset="MSFT">
+        <DividendDetailledProperties value="Dividends shown for the experiment" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AASM">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+    </PlayerType>
+    <PlayerType name="GAMBLER">
+      <OperatorsPlayed />
+      <Portfolio cash="30000.0">
+        <Owning asset="BELA" qtty="0" />
+        <Owning asset="DADX" qtty="0" />
+        <Owning asset="AKBL" qtty="0" />
+        <Owning asset="FDIBL" qtty="0" />
+        <Owning asset="ALFT" qtty="0" />
+        <Owning asset="EFUL" qtty="0" />
+        <Owning asset="ATEL" qtty="0" />
+        <Owning asset="DEL" qtty="0" />
+        <Owning asset="AACIL" qtty="0" />
+        <Owning asset="FISM" qtty="0" />
+        <Owning asset="ALICO" qtty="0" />
+        <Owning asset="AABS" qtty="0" />
+        <Owning asset="COTT" qtty="0" />
+        <Owning asset="MSFT" qtty="0" />
+        <Owning asset="7UP" qtty="0" />
+        <Owning asset="AASM" qtty="0" />
+      </Portfolio>
+      <DividendInfo asset="BELA">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="DADX">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AKBL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="FDIBL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ALFT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="EFUL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ATEL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AACIL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="DEL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="FISM">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ALICO">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AABS">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="COTT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="7UP">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="20" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="MSFT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AASM">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+    </PlayerType>
+    <PlayerType name="IDIOT">
+      <OperatorsPlayed />
+      <Portfolio cash="5000.0">
+        <Owning asset="BELA" qtty="0" />
+        <Owning asset="DADX" qtty="0" />
+        <Owning asset="AKBL" qtty="0" />
+        <Owning asset="FDIBL" qtty="0" />
+        <Owning asset="ALFT" qtty="0" />
+        <Owning asset="EFUL" qtty="0" />
+        <Owning asset="ATEL" qtty="0" />
+        <Owning asset="DEL" qtty="0" />
+        <Owning asset="AACIL" qtty="0" />
+        <Owning asset="FISM" qtty="0" />
+        <Owning asset="ALICO" qtty="0" />
+        <Owning asset="AABS" qtty="0" />
+        <Owning asset="COTT" qtty="0" />
+        <Owning asset="MSFT" qtty="0" />
+        <Owning asset="7UP" qtty="0" />
+        <Owning asset="AASM" qtty="0" />
+      </Portfolio>
+      <DividendInfo asset="BELA">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="DADX">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AKBL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="FDIBL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ALFT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="EFUL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ATEL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AACIL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="DEL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="FISM">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ALICO">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AABS">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="COTT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="7UP">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="20" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="MSFT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AASM">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+    </PlayerType>
+    <PlayerType name="PRO">
+      <OperatorsPlayed>
+        <Operator name="Brokkerman1 on KSE" />
+      </OperatorsPlayed>
+      <Portfolio cash="100000.0">
+        <Owning asset="BELA" qtty="99920" />
+        <Owning asset="DADX" qtty="200" />
+        <Owning asset="AKBL" qtty="500" />
+        <Owning asset="FDIBL" qtty="5000" />
+        <Owning asset="ALFT" qtty="9999" />
+        <Owning asset="EFUL" qtty="990" />
+        <Owning asset="ATEL" qtty="999" />
+        <Owning asset="DEL" qtty="99" />
+        <Owning asset="AACIL" qtty="999999" />
+        <Owning asset="FISM" qtty="99999" />
+        <Owning asset="ALICO" qtty="99999" />
+        <Owning asset="AABS" qtty="99999" />
+        <Owning asset="COTT" qtty="9999" />
+        <Owning asset="MSFT" qtty="9999" />
+        <Owning asset="7UP" qtty="999" />
+        <Owning asset="AASM" qtty="999" />
+      </Portfolio>
+      <DividendInfo asset="BELA">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="DADX">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AKBL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="FDIBL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ALFT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="EFUL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ATEL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AACIL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="DEL">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="FISM">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="ALICO">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AABS">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="COTT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="7UP">
+        <DividendDetailledProperties value="Dividends shown for the experiment" />
+        <WindowSize value="20" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="true" />
+        <DisplayHoldingValueForWindow value="true" />
+        <DisplayOperationsCosts value="true" />
+      </DividendInfo>
+      <DividendInfo asset="MSFT">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+      <DividendInfo asset="AASM">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="false" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="false" />
+      </DividendInfo>
+    </PlayerType>
+    <Information />
+  </Scenario>
+  <Chat />
+  <Robots>
+    <ZitNotDiscreets>
+      <NumberOfRobots>10</NumberOfRobots>
+      <LowLimit>0</LowLimit>
+      <HighLimit>100</HighLimit>
+      <Periodpercentage>10</Periodpercentage>
+    </ZitNotDiscreets>
+    <ZitDiscreets>
+      <NumberOfRobots>20</NumberOfRobots>
+      <PeriodPercentage>10</PeriodPercentage>
+    </ZitDiscreets>
+    <ItDiscreet>
+      <NumberOfRobots>50</NumberOfRobots>
+      <PeriodPercentage>10</PeriodPercentage>
+    </ItDiscreet>
+  </Robots>
+</JessXSetup>
+

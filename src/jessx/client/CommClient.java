@@ -42,7 +42,7 @@ class CommClient extends Thread
             ClientCore.fireConnectionStateChanged(this.state = newState);
         }
     }
-    
+  //EDOARDO CONNECT SOURCE
     public void connect(final String hostName, final String login, final String password) throws IOException {
         try {
             Utils.logger.debug("Getting the socket to the server...");

@@ -429,7 +429,7 @@ public class GClientFrame extends JFrame implements Constants, OperatorPlayedLis
         this.jPanelCommunication2.setBorder(this.titledBorder17);
         this.jPanelCommunication2.setMinimumSize(new Dimension(20, 100));
         this.jPanelCommunication2.setPreferredSize(new Dimension(150, 100));
-        this.jPanelCommunication2.setLayout(this.gridBagLayoutCommunication);
+        //this.jPanelCommunication2.setLayout(this.gridBagLayoutCommunication);
         this.contentPaneGeneral.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
         this.contentPaneGeneral.setMinimumSize(new Dimension(800, 600));
         this.contentPaneGeneral.setPreferredSize(new Dimension(800, 600));
