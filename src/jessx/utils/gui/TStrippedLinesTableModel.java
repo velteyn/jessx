@@ -11,7 +11,12 @@ import javax.swing.table.DefaultTableModel;
 
 public class TStrippedLinesTableModel extends DefaultTableModel implements Constants
 {
-    public TStrippedLinesTableModel(final Object[] columnNames, final int rowCount) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 8302896578728793552L;
+
+	public TStrippedLinesTableModel(final Object[] columnNames, final int rowCount) {
         super(columnNames, rowCount);
     }
     

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JessXSetup>
+  <GeneralParameters>
+    <WorkingDirectory>C:\Projects\Virtual Investor\workspace\Jessx</WorkingDirectory>
+    <SetupFileName>Scenario WF</SetupFileName>
+    <XMLVersion>1.6</XMLVersion>
+    <LoggingFileName>SimBulSpec Log 2.xml</LoggingFileName>
+    <PeriodNumber>8</PeriodNumber>
+    <PeriodDuration>1800</PeriodDuration>
+    <InterestRate periodCount="8">
+      <PeriodRate Rate="2.0" />
+      <PeriodRate Rate="5.0" />
+      <PeriodRate Rate="2.0" />
+      <PeriodRate Rate="1.0" />
+      <PeriodRate Rate="1.0" />
+      <PeriodRate Rate="2.0" />
+      <PeriodRate Rate="2.0" />
+      <PeriodRate Rate="2.0" />
+    </InterestRate>
+    <JoiningAfterStartup>true</JoiningAfterStartup>
+  </GeneralParameters>
+  <Asset type="Stock" name="Action A">
+    <DividendModel periodCount="8">
+      <Dividend mean="5.0" variance="2.0" />
+      <Dividend mean="5.0" variance="2.0" />
+      <Dividend mean="4.0" variance="2.0" />
+      <Dividend mean="4.0" variance="1.0" />
+      <Dividend mean="6.5" variance="1.0" />
+      <Dividend mean="14.0" variance="1.0" />
+      <Dividend mean="13.0" variance="1.0" />
+      <Dividend mean="14.0" variance="1.0" />
+    </DividendModel>
+  </Asset>
+  <Asset type="Stock" name="Action B">
+    <DividendModel periodCount="8">
+      <Dividend mean="6.0" variance="1.0" />
+      <Dividend mean="8.0" variance="1.0" />
+      <Dividend mean="11.0" variance="1.0" />
+      <Dividend mean="6.0" variance="1.0" />
+      <Dividend mean="9.0" variance="1.0" />
+      <Dividend mean="4.0" variance="1.0" />
+      <Dividend mean="0.0" variance="1.0" />
+      <Dividend mean="0.0" variance="1.0" />
+    </DividendModel>
+  </Asset>
+  <Institution type="OrderMarket" name="Market A" quotedAsset="Action A">
+    <KeepOrderBook allow="true" />
+    <OperationsCost>
+      <Operation name="Market Order" percentageCost="0.0" minimalCost="0.0" />
+      <Operation name="Delete Order" percentageCost="0.5" minimalCost="0.0" />
+      <Operation name="Limit Order" percentageCost="0.0" minimalCost="0.0" />
+      <Operation name="Best Limit Order" percentageCost="0.0" minimalCost="0.0" />
+    </OperationsCost>
+    <Operators>
+      <Operator name="Trader" orderbookVisibility="5">
+        <GrantedOperation name="Delete Order" />
+        <GrantedOperation name="Limit Order" />
+      </Operator>
+    </Operators>
+  </Institution>
+  <Institution type="OrderMarket" name="Market B" quotedAsset="Action B">
+    <KeepOrderBook allow="true" />
+    <OperationsCost>
+      <Operation name="Market Order" percentageCost="0.0" minimalCost="0.0" />
+      <Operation name="Delete Order" percentageCost="0.5" minimalCost="0.0" />
+      <Operation name="Limit Order" percentageCost="0.5" minimalCost="0.0" />
+      <Operation name="Best Limit Order" percentageCost="0.0" minimalCost="0.0" />
+    </OperationsCost>
+    <Operators>
+      <Operator name="Trader" orderbookVisibility="5">
+        <GrantedOperation name="Delete Order" />
+        <GrantedOperation name="Limit Order" />
+      </Operator>
+    </Operators>
+  </Institution>
+  <Scenario>
+    <PlayerType name="Trader">
+      <OperatorsPlayed>
+        <Operator name="Trader on Market A" />
+        <Operator name="Trader on Market B" />
+      </OperatorsPlayed>
+      <Portfolio cash="6000.0">
+        <Owning asset="Action B" qtty="50" />
+        <Owning asset="Action A" qtty="90" />
+      </Portfolio>
+      <DividendInfo asset="Action B">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="true" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="true" />
+      </DividendInfo>
+      <DividendInfo asset="Action A">
+        <DividendDetailledProperties value="Dividends not shown" />
+        <WindowSize value="1" />
+        <DisplayWindowSize value="false" />
+        <DisplaySessionLength value="false" />
+        <DisplayHoldingValueForExperiment value="true" />
+        <DisplayHoldingValueForWindow value="false" />
+        <DisplayOperationsCosts value="true" />
+      </DividendInfo>
+    </PlayerType>
+    <Information>
+      <Information Content="Company A continues to increase its turnover and becomes a leader in its field.  &#xA; Company B files for bankruptcy. " Category="All players" Period="8" Time="8" />
+      <Information Content="Company A, through its investment in its own construction, receives aid from the international community. &#xA; The various attempts to rescue group B by the American administration fail, the 15 million of the Paulson plan dedicated to the company A does nothing. " Category="All players" Period="7" Time="7" />
+      <Information Content="Company B announces bankruptcy! &#xA;" Category="All players" Period="8" Time="6" />
+      <Information Content="Company B has been a leader in its field for 76 years and reports record profits (low volatility). &#xA; Company A remains stable, its dividends are in the order of $ 4 with a high valatility ($ 2) . " Category="All players" Period="1" Time="6" />
+      <Information Content="Company A takes risks, it embarks on new technologies, it reinvests all the profits in the  construction de nouvelles usines. The value of dividends does not change and volatility remains high.&#xA;&#xA; Company B continues its policy and conquers new market, volatility still low.&#xA; The ECB announces rates of interest of around 5%. " Category="All players" Period="2" Time="7" />
+      <Information Content="Construction of Company A's latest generation factories is behind schedule.  &#xA; Company B does not invest any funds in new manufacturing technologies. " Category="All players" Period="3" Time="9" />
+      <Information Content="In consumer satisfaction studies as well as in reliability surveys in Japan, Europe and the USA, company A is leading the way. &#xA; Company B is suffering from the subprime crisis. Its sales are declining." Category="All players" Period="4" Time="8" />
+      <Information Content="Company A is taking advantage of the crisis to increase the number of sales of its flagship product, a 30% increase in dividends. &#xA; The increase in the price of oil is hitting the sales of company B, which continues to lower the value of its dividends." Category="All players" Period="5" Time="10" />
+    </Information>
+  </Scenario>
+  <Chat />
+  <Robots>
+    <ZitNotDiscreets>
+      <NumberOfRobots>10</NumberOfRobots>
+      <LowLimit>0</LowLimit>
+      <HighLimit>100</HighLimit>
+      <Periodpercentage>10</Periodpercentage>
+    </ZitNotDiscreets>
+    <ZitDiscreets>
+      <NumberOfRobots>10</NumberOfRobots>
+      <PeriodPercentage>10</PeriodPercentage>
+    </ZitDiscreets>
+    <ItDiscreet>
+      <NumberOfRobots>10</NumberOfRobots>
+      <PeriodPercentage>10</PeriodPercentage>
+    </ItDiscreet>
+  </Robots>
+</JessXSetup>
+

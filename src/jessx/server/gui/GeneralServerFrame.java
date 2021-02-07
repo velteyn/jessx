@@ -524,9 +524,9 @@ public class GeneralServerFrame extends JFrame implements Constants, PlayerTypeL
         final int tempIT = this.treeModel.zitDiscreetITServerGui.getJSliderFrequency();
         for (int i = 0; i < this.treeModel.zitDiscreetServerGui.getJSpinnerNumberOfRobots(); ++i) {
             final Robot zitDiscreet = new Discreet(i, temp);
-            System.out.println("dans for, apr\u00e8s cr\u00e9ation du discreet " + i + " et avant start");
+            System.out.println("in for, after creating the discreet "+ i +" and before start");
             zitDiscreet.start();
-            System.out.println("apr\u00e8s start du discreet " + i);
+            System.out.println("after discreet start " + i);
         }
         for (int i = 0; i < this.treeModel.zitDiscreetITServerGui.getJSpinnerNumberOfRobots(); ++i) {
             final Robot zitDiscreetIT = new DiscreetIT(i, tempIT);

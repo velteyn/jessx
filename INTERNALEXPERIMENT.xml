@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <JessXSetup>
   <GeneralParameters>
-    <WorkingDirectory>C:\Projects\Virtual Investor</WorkingDirectory>
+    <WorkingDirectory>C:\Projects\Virtual Investor\workspace\Jessx</WorkingDirectory>
     <SetupFileName>Internal Experiment</SetupFileName>
     <XMLVersion>1.6</XMLVersion>
     <LoggingFileName>INTERNALEXPERIMENT Log 1.xml</LoggingFileName>
@@ -1834,8 +1834,8 @@
         <Owning asset="ALICO" qtty="0" />
         <Owning asset="AABS" qtty="0" />
         <Owning asset="COTT" qtty="0" />
-        <Owning asset="MSFT" qtty="0" />
         <Owning asset="7UP" qtty="0" />
+        <Owning asset="MSFT" qtty="0" />
         <Owning asset="AASM" qtty="0" />
       </Portfolio>
       <DividendInfo asset="BELA">
@@ -1999,8 +1999,8 @@
         <Owning asset="ALICO" qtty="0" />
         <Owning asset="AABS" qtty="0" />
         <Owning asset="COTT" qtty="0" />
-        <Owning asset="MSFT" qtty="0" />
         <Owning asset="7UP" qtty="0" />
+        <Owning asset="MSFT" qtty="0" />
         <Owning asset="AASM" qtty="0" />
       </Portfolio>
       <DividendInfo asset="BELA">
@@ -2164,8 +2164,8 @@
         <Owning asset="ALICO" qtty="0" />
         <Owning asset="AABS" qtty="0" />
         <Owning asset="COTT" qtty="0" />
-        <Owning asset="MSFT" qtty="0" />
         <Owning asset="7UP" qtty="0" />
+        <Owning asset="MSFT" qtty="0" />
         <Owning asset="AASM" qtty="0" />
       </Portfolio>
       <DividendInfo asset="BELA">
@@ -2331,8 +2331,8 @@
         <Owning asset="ALICO" qtty="99999" />
         <Owning asset="AABS" qtty="99999" />
         <Owning asset="COTT" qtty="9999" />
-        <Owning asset="MSFT" qtty="9999" />
         <Owning asset="7UP" qtty="999" />
+        <Owning asset="MSFT" qtty="9999" />
         <Owning asset="AASM" qtty="999" />
       </Portfolio>
       <DividendInfo asset="BELA">
