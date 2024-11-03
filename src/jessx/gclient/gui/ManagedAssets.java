@@ -4,26 +4,28 @@
 
 package jessx.gclient.gui;
 
-import javax.swing.table.TableCellRenderer;
-import jessx.utils.gui.JLabelRenderer;
-import java.awt.Component;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import java.awt.LayoutManager;
 import java.awt.Dimension;
-import javax.swing.border.TitledBorder;
-import javax.swing.BorderFactory;
-import javax.swing.table.TableModel;
-import javax.swing.JTable;
+import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import javax.swing.border.Border;
-import javax.swing.JScrollPane;
-import jessx.utils.Constants;
+import java.awt.Insets;
+
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
+
+import jessx.utils.Constants;
+import jessx.utils.gui.JLabelRenderer;
 
 public class ManagedAssets extends JPanel implements Constants
 {
-    JScrollPane ScrollPaneManagedAssets;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6278989316181107908L;
+	JScrollPane ScrollPaneManagedAssets;
     Border border1;
     PortfolioTableModel tableJTable2Model;
     GridBagLayout gridBagLayoutManagedAssets;
@@ -49,7 +51,7 @@ public class ManagedAssets extends JPanel implements Constants
         this.ScrollPaneManagedAssets.setHorizontalScrollBarPolicy(30);
         this.ScrollPaneManagedAssets.setAutoscrolls(false);
         this.ScrollPaneManagedAssets.setRequestFocusEnabled(true);
-        this.ScrollPaneManagedAssets.getViewport().add(this.TableManagedAssets, null);
+        this.ScrollPaneManagedAssets.setViewportView(this.TableManagedAssets);
         this.TableManagedAssets.setRowSelectionAllowed(false);
         this.TableManagedAssets.getColumnModel().getColumn(0).setCellRenderer(new JLabelRenderer());
         this.TableManagedAssets.getColumnModel().getColumn(1).setCellRenderer(new JLabelRenderer());

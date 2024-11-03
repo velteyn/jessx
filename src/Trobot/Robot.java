@@ -131,7 +131,8 @@ public abstract class Robot extends Thread implements ExperimentDeveloppmentList
       OrderBook ob = new OrderBook();
       ob.initFromNetworkInput(xmlDoc.getRootElement());
       this.datesLastOrder.put(ob.getInstitution(), new Date());
-      ((LinkedList<OrderBook>)this.orderBooks.get(ob.getInstitution())).add(ob);
+      if(this.orderBooks.size()>0)
+    	  ((LinkedList<OrderBook>)this.orderBooks.get(ob.getInstitution())).add(ob);
     } 
   }
   

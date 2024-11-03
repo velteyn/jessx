@@ -44,7 +44,7 @@ public abstract class Animator extends Robot
             final OrderBook ob = new OrderBook();
             ob.initFromNetworkInput(xmlDoc.getRootElement());
             
-            if( !this.getMySchedulers().isEmpty())
+            if( !this.getMySchedulers().isEmpty() && this.getMySchedulers().get(ob.getInstitution()) != null)
             	this.getMySchedulers().get(ob.getInstitution()).cancel();
             this.getMySchedulers().put(ob.getInstitution(), new Timer());
             if (this.isOrdersAllowed() && this.isHasToRun()) {
