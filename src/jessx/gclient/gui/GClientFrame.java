@@ -156,6 +156,9 @@ public class GClientFrame extends JFrame implements Constants, OperatorPlayedLis
     private List managedAssetsList;
     private Map marketMap;
     
+    public static final Font FONT_CLIENT_TITLE_BORDER = new Font("NomeFont", Font.BOLD, 12); // Inizializzazione statica
+
+    
     static {
         GClientFrame.evolutionGraphFactories = new Hashtable();
     }
@@ -210,7 +213,7 @@ public class GClientFrame extends JFrame implements Constants, OperatorPlayedLis
         this.jLabel1 = new JLabel();
         this.jLabel2 = new JLabel();
         this.jTabbedPane3 = new JTabbedPane();
-        this.timer = new ClientTimer(this.jTextFieldTimer);
+
         this.lastIndexPanel1 = -1;
         this.lastIndexPanel2 = -1;
         this.lastIndexPanel3 = -1;
@@ -363,6 +366,7 @@ public class GClientFrame extends JFrame implements Constants, OperatorPlayedLis
     }
     
     public void jbInit() throws Exception {
+    	
         this.setIconImage(new ImageIcon("./images/logo_JessX_small.GIF").getImage());
         this.contentPaneGeneral = (JPanel)this.getContentPane();
         this.titledBorder1 = new TitledBorder(new EtchedBorder(0, Color.white, new Color(148, 145, 140)), "Assets", 0, 0, GClientFrame.FONT_CLIENT_TITLE_BORDER);
@@ -545,9 +549,9 @@ public class GClientFrame extends JFrame implements Constants, OperatorPlayedLis
         this.contentPaneGeneral.add(this.jLabel1, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0, 17, 0, new Insets(0, 10, 0, 0), 0, 0));
         this.contentPaneGeneral.add(this.jLabel2, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0, 13, 0, new Insets(0, 0, 0, 10), 0, 0));
         this.jPanelCommunication.add(this.jScrollPaneCommunication, new GridBagConstraints(0, 0, 1, 1, 1.0, 1.0, 10, 1, new Insets(4, 4, 2, 4), 0, 0));
-        this.jScrollPaneCommunication.getViewport().add(this.jTextAreaCommunication, null);
+        this.jScrollPaneCommunication.setViewportView(this.jTextAreaCommunication);
         this.jPanelCommunication2.add(this.jScrollPaneCommunication2, new GridBagConstraints(0, 0, 1, 1, 1.0, 1.0, 10, 1, new Insets(4, 4, 2, 4), 0, 0));
-        this.jScrollPaneCommunication2.getViewport().add(this.jTextAreaCommunication2, null);
+        this.jScrollPaneCommunication2.setViewportView(this.jTextAreaCommunication2);
         this.jPanelTransactionsProperties.add(this.jTabbedPane3, new GridBagConstraints(0, 0, 1, 1, 1.0, 1.0, 10, 1, new Insets(0, 0, 0, 0), 0, 0));
         this.jPanelWest.add(this.jPanelManagedAssets, new GridBagConstraints(0, 1, 1, 1, 1.0, 0.1, 10, 1, new Insets(10, 0, 0, 0), 0, 0));
         this.jPanelManagedAssets.add(this.jScrollPaneManagedAssets, new GridBagConstraints(0, 0, 1, 1, 1.0, 0.5, 10, 1, new Insets(0, 0, 0, 0), 0, 0));
@@ -564,6 +568,7 @@ public class GClientFrame extends JFrame implements Constants, OperatorPlayedLis
         this.jSplitPaneInfoComm.setDividerLocation(150);
         this.jSplitPane2.setDividerLocation(450);
         this.jSplitPane3.setDividerLocation(400);
+        this.timer = new ClientTimer(this.jTextFieldTimer);
     }
     
     public void jMenuFileExit_actionPerformed(final ActionEvent e) {
