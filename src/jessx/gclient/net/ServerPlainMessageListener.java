@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.gclient.net;
@@ -23,7 +23,7 @@ public class ServerPlainMessageListener implements NetworkListener
         try {
             this.jbInit();
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             ex.printStackTrace();
         }
     }

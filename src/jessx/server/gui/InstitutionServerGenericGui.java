@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -60,7 +60,7 @@ public class InstitutionServerGenericGui extends JPanel implements DisplayableNo
         try {
             this.jbInit();
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             e.printStackTrace();
         }
         BusinessCore.addAssetListener(this);
@@ -239,7 +239,7 @@ public class InstitutionServerGenericGui extends JPanel implements DisplayableNo
             newInstitution.setAsset(BusinessCore.getAsset(quotedAsset));
             BusinessCore.addInstitution(newInstitution);
         }
-        catch (InstitutionNotCreatedException ex) {
+        catch (final InstitutionNotCreatedException ex) {
             Utils.logger.warn(String.valueOf(ex.toString()) + ". Error creating an institution whose type was in combobox.");
             ex.printStackTrace();
         }

@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.analysis;
@@ -29,7 +29,7 @@ public abstract class AnalysisToolCreator
                     throw new AnalysisToolNotCreatedException();
                 }
             }
-            catch (ClassNotFoundException e) {
+            catch (final ClassNotFoundException e) {
                 AnalysisToolsCore.logger.warn("Tools not found in the classPath.");
                 throw new AnalysisToolNotCreatedException();
             }
@@ -38,12 +38,12 @@ public abstract class AnalysisToolCreator
         try {
             return (AnalysisTool) analysisClass.newInstance();
         }
-        catch (IllegalAccessException ex) {
+        catch (final IllegalAccessException ex) {
             AnalysisToolsCore.logger.error("error creating the requested tool: " + ex.toString());
             ex.printStackTrace();
             return null;
         }
-        catch (InstantiationException ex2) {
+        catch (final InstantiationException ex2) {
             AnalysisToolsCore.logger.error("error creating the requested tool: " + ex2.toString());
             ex2.printStackTrace();
             return null;

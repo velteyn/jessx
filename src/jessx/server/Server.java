@@ -1,25 +1,24 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server;
 
+import javax.swing.UIManager;
+import org.apache.log4j.PropertyConfigurator;
+import java.util.Properties;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.io.File;
-import java.io.FileFilter;
-import java.util.Properties;
-
-import javax.swing.UIManager;
-
+import org.jdom.Document;
+import javax.swing.JFrame;
+import jessx.utils.Utils;
+import jessx.business.GeneralParameters;
 import jessx.business.BusinessCore;
 import jessx.server.gui.GeneralParameterSetupGui;
-import jessx.server.gui.GeneralServerFrame;
 import jessx.server.net.NetworkCore;
-import jessx.utils.Utils;
-
-import org.apache.log4j.PropertyConfigurator;
-import org.jdom.Document;
+import java.io.File;
+import java.io.FileFilter;
+import jessx.server.gui.GeneralServerFrame;
 
 public class Server
 {
@@ -92,7 +91,7 @@ public class Server
                 BusinessCore.loadFromXml(xmlDoc.getRootElement(), this.frame);
             }
         }
-        catch (Exception ex) {}
+        catch (final Exception ex) {}
     }
     
     private void loadJessXModules() {
@@ -167,7 +166,7 @@ public class Server
             Utils.logger.debug("Getting and setting look and feel...");
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             Utils.logger.error("Error while loading look and feel: " + e.toString());
             e.printStackTrace();
         }

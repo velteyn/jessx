@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business.institutions;
@@ -35,7 +35,7 @@ class CellFading extends Thread
             try {
                 Thread.sleep(CellFading.DURATION / CellFading.STATE_NUM);
             }
-            catch (InterruptedException ex) {}
+            catch (final InterruptedException ex) {}
             for (int i = 0; i < this.cells.size(); ++i) {
                 final ColoredCell tempCell = (ColoredCell) this.cells.elementAt(i);
                 tempCell.nextColor();

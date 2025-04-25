@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.utils;
@@ -54,7 +54,7 @@ public class FileChooserSave
                 }
             }
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             System.out.print("Error when the file is created...\n" + ex.toString());
             this.ans = 1;
         }

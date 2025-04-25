@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business.operations;
@@ -22,7 +22,7 @@ public class LimitOrder extends Order
             System.out.println("Loading LimitOrder...");
             OperationCreator.operationFactories.put("Limit Order", Class.forName("jessx.business.operations.LimitOrder"));
         }
-        catch (ClassNotFoundException exception) {
+        catch (final ClassNotFoundException exception) {
             System.out.println("Unabled to locate the LimitOrder class. Reason: bad class name spelling.");
             exception.printStackTrace();
         }

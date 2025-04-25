@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business.operations;
@@ -28,7 +28,7 @@ public class DeleteOrder extends Operation
             System.out.println("Loading DeleteOrder...");
             OperationCreator.operationFactories.put("Delete Order", Class.forName("jessx.business.operations.DeleteOrder"));
         }
-        catch (ClassNotFoundException exception) {
+        catch (final ClassNotFoundException exception) {
             System.out.println("Unabled to locate the DeleteOrder class. Reason: probably a bad class name spelling.");
             exception.printStackTrace();
         }

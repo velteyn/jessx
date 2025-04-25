@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business;
@@ -34,12 +34,12 @@ public abstract class InstitutionCreator
         try {
             return (Institution) institutionClass.newInstance();
         }
-        catch (IllegalAccessException ex) {
+        catch (final IllegalAccessException ex) {
             Utils.logger.error("error creating the requested institution: " + ex.toString());
             ex.printStackTrace();
             throw new InstitutionNotCreatedException();
         }
-        catch (InstantiationException ex2) {
+        catch (final InstantiationException ex2) {
             Utils.logger.error("error creating the requested institution: " + ex2.toString());
             ex2.printStackTrace();
             throw new InstitutionNotCreatedException();

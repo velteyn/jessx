@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business.operations;
@@ -80,7 +80,7 @@ public class LimitOrderClientPanel extends JPanel implements ClientInputPanel
         try {
             this.jbInit();
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             e.printStackTrace();
         }
     }
@@ -253,7 +253,7 @@ public class LimitOrderClientPanel extends JPanel implements ClientInputPanel
                 this.desactivateBuyButton();
                 this.desactivateSellButton();
             }
-            catch (Exception ex) {}
+            catch (final Exception ex) {}
         }
     }
     
@@ -285,7 +285,7 @@ public class LimitOrderClientPanel extends JPanel implements ClientInputPanel
             final float operationPercentageCost = ClientCore.getInstitution(this.institution).getPercentageCost("Limit Order");
             this.jToggleButtonBuy.isSelected();
         }
-        catch (Exception ex) {}
+        catch (final Exception ex) {}
         return response;
     }
     

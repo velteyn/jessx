@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.analysis.tools;
@@ -40,7 +40,7 @@ public class BasicAnalysis extends JPanel implements AnalysisTool
             AnalysisToolCreator.analyseFactories.put("BasicAnalysis", Class.forName("jessx.analysis.tools.BasicAnalysis"));
             System.out.println("Basic analysis registered");
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             System.out.println("Problem registering BasicAnalysis tool: " + ex.toString());
         }
     }
@@ -95,37 +95,56 @@ public class BasicAnalysis extends JPanel implements AnalysisTool
     private void initDataSet() {
         AnalysisToolsCore.logger.debug("Open XML");
         final Element experimentNode = this.doc.getRootElement();
-        this.institutions = experimentNode.getChild("Setup").getChildren("Institution");
-        for (final Object institution : this.institutions) {
-            final String institutionName = ((Element) institution).getAttributeValue("name");
-            this.datasetInstitution.put(String.valueOf(institutionName) + "ask", new XYSeries("Best Ask Limit"));
-            this.datasetInstitution.put(String.valueOf(institutionName) + "bid", new XYSeries("Best Bid Limit"));
-            this.datasetInstitution.put(String.valueOf(institutionName) + "price", new XYSeries("Price"));
-            AnalysisToolsCore.logger.debug("New Institution" + institutionName);
+        institutions = experimentNode.getChild("Setup").getChildren("Institution");
+        Iterator institutionsIter = institutions.iterator();
+        while(institutionsIter.hasNext()) {
+          Element institution = (Element)institutionsIter.next();
+          String institutionName =institution.getAttributeValue("name");
+          datasetInstitution.put(institutionName+"ask",new XYSeries("Best Ask Limit"));
+          datasetInstitution.put(institutionName+"bid",new XYSeries("Best Bid Limit"));
+          datasetInstitution.put(institutionName+"price",new XYSeries("Price"));
+          AnalysisToolsCore.logger.debug("New Institution"+institutionName);
+
         }
-        final List periods = experimentNode.getChildren("Period");
+        List periods = experimentNode.getChildren("Period");
         AnalysisToolsCore.logger.debug("List of periods created");
-        for (final Object period : periods) {
-            final List orderBooks = ((Element) period).getChildren("OrderBook");
+        Iterator periodsIter = periods.iterator();
+        while(periodsIter.hasNext()) {
+        	Element period = (Element)periodsIter.next();
+            List orderBooks = period.getChildren("OrderBook");
             AnalysisToolsCore.logger.debug("List of OrderBooks created");
-            for (final Object orderBook : orderBooks) {
-                float price = this.getBestBidFromOrderBook((Element) orderBook);
-                if (price >= 0.0f) {
-                    ((XYSeries) this.datasetInstitution.get(String.valueOf(((Element) orderBook).getChild("Bid").getChild("Operation").getAttributeValue("institution")) + "bid")).add(Float.parseFloat(((Element) orderBook).getAttributeValue("timestamp")) / 1000.0f + this.sessionDuration, price);
+            Iterator orderBooksIter = orderBooks.iterator();
+
+            while(orderBooksIter.hasNext()) {
+                Element orderBook = (Element)orderBooksIter.next();
+                float price = this.getBestBidFromOrderBook(orderBook);
+                if (price >= 0) {
+                 ((XYSeries) datasetInstitution.get(orderBook.getChild("Bid").getChild("Operation").getAttributeValue("institution")+"bid")).
+                     add(Float.parseFloat(orderBook.getAttributeValue("timestamp"))/1000 + this.sessionDuration, price);
                 }
-                price = this.getBestAskFromOrderBook((Element) orderBook);
-                if (price >= 0.0f) {
-                    ((XYSeries) this.datasetInstitution.get(String.valueOf(((Element) orderBook).getChild("Ask").getChild("Operation").getAttributeValue("institution")) + "ask")).add(Float.parseFloat(((Element) orderBook).getAttributeValue("timestamp")) / 1000.0f + this.sessionDuration, price);
+
+                price = this.getBestAskFromOrderBook(orderBook);
+                if (price >= 0) {
+                  ((XYSeries) datasetInstitution.get(orderBook.getChild("Ask").getChild("Operation").getAttributeValue("institution")+"ask")).
+                      add(Float.parseFloat(orderBook.getAttributeValue("timestamp"))/1000 + this.sessionDuration, price);
                 }
-            }
-            final List deals = ((Element) period).getChildren("Deal");
+
+              }
+            final List deals = period.getChildren("Deal");
             AnalysisToolsCore.logger.debug("List of deals created");
-            for (final Object deal : deals) {
-                final float time = Float.parseFloat(((Element) deal).getChild("Deal").getAttributeValue("timestamp")) / 1000.0f + this.sessionDuration;
-                final float price2 = Float.parseFloat(((Element) deal).getChild("Deal").getAttributeValue("price"));
-                ((XYSeries) this.datasetInstitution.get(String.valueOf(((Element) deal).getChild("Deal").getAttributeValue("institution")) + "price")).add(time, price2);
-                ((XYSeries) this.datasetInstitution.get(String.valueOf(((Element) deal).getChild("Deal").getAttributeValue("institution")) + "ask")).add(time, price2);
-                ((XYSeries) this.datasetInstitution.get(String.valueOf(((Element) deal).getChild("Deal").getAttributeValue("institution")) + "bid")).add(time, price2);
+            Iterator dealIter = deals.iterator();
+            float time;
+            float price;
+            while (dealIter.hasNext()) {
+              Element deal = (Element)dealIter.next();
+              time = Float.parseFloat(deal.getChild("Deal").getAttributeValue("timestamp"))/1000 + this.sessionDuration;
+              price = Float.parseFloat(deal.getChild("Deal").getAttributeValue("price"));
+              ((XYSeries) datasetInstitution.get(deal.getChild("Deal").getAttributeValue("institution")+"price")).
+                  add(time, price);
+              ((XYSeries) datasetInstitution.get(deal.getChild("Deal").getAttributeValue("institution")+"ask")).
+                  add(time, price);
+              ((XYSeries) datasetInstitution.get(deal.getChild("Deal").getAttributeValue("institution")+"bid")).
+                  add(time, price);
             }
             this.sessionDuration += (long)Float.parseFloat(experimentNode.getChild("Setup").getChild("GeneralParameters").getChildText("PeriodDuration"));
         }

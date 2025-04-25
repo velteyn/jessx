@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -59,7 +59,7 @@ public class PlayerTypeSetupGui extends JPanel implements DisplayableNode, Playe
         try {
             this.jbInit();
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             e.printStackTrace();
         }
         final Iterator opIter = this.playerType.getOperatorsPlayed().keySet().iterator();
@@ -131,39 +131,35 @@ public class PlayerTypeSetupGui extends JPanel implements DisplayableNode, Playe
     }
     
     private void askUserAnOperator() {
-        JLabel jLabel = new JLabel("You are going to grant this player type with the right to play an operator.");
-
-        Vector operatorList = new Vector();
+        final JLabel jLabel = new JLabel("You are going to grant this player type with the right to play an operator.");
+        final Vector operatorList = new Vector();
         Iterator institIter = BusinessCore.getInstitutions().keySet().iterator();
         while(institIter.hasNext()) {
           String institKey = (String)institIter.next();
-          Institution tempInstit = BusinessCore.getInstitution(institKey);
-
-          if (!this.isAlreadyPresent(institKey)) {
-            Iterator operIter = ((Institution)BusinessCore.getInstitution(institKey)).getOperators().keySet().iterator();
-            while (operIter.hasNext()) {
-              String operKey = (String) operIter.next();
-              if (!isOperatorPlayed(tempInstit.getOperator(operKey).getCompleteName()))
-                operatorList.add(tempInstit.getOperator(operKey));
+            final Institution tempInstit = BusinessCore.getInstitution(institKey);
+            if (!this.isAlreadyPresent(institKey)) {
+            	 Iterator operIter = ((Institution)BusinessCore.getInstitution(institKey)).getOperators().keySet().iterator();
+                 while (operIter.hasNext()) {
+                   String operKey = (String) operIter.next();
+                    if (!this.isOperatorPlayed(tempInstit.getOperator(operKey).getCompleteName())) {
+                        operatorList.add(tempInstit.getOperator(operKey));
+                    }
+                }
             }
-          }
         }
-
-        JComboBox jComboBox = new JComboBox(operatorList);
-
-        JPanel panel = new JPanel(new GridLayout(2,1));
-
+        final JComboBox jComboBox = new JComboBox(operatorList);
+        final JPanel panel = new JPanel(new GridLayout(2, 1));
         panel.add(jLabel);
         panel.add(jComboBox);
-
-        int response = JOptionPane.showConfirmDialog(jScrollPane2,panel,"Grant an operator right.", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
-
-        if (response == JOptionPane.OK_OPTION) {
-          Utils.logger.debug("Operator selected : " + jComboBox.getSelectedIndex());
-          if (jComboBox.getSelectedIndex()!=-1)
-            this.playerType.addOperatorPlayed((Operator)jComboBox.getSelectedItem());
+        final int response = JOptionPane.showConfirmDialog(this.jScrollPane2, panel, "Grant an operator right.", 2, 1);
+        if (response == 0) {
+            Utils.logger.debug("Operator selected : " + jComboBox.getSelectedIndex());
+            if (jComboBox.getSelectedIndex() != -1) {
+                this.playerType.addOperatorPlayed((Operator)jComboBox.getSelectedItem());
+            }
         }
-      }
+    }
+    
     private boolean isAlreadyPresent(final String institutionName) {
         for (int i = 0; i < this.jTable2.getRowCount(); ++i) {
             final String completeName = this.jTable2.getValueAt(i, 0).toString();

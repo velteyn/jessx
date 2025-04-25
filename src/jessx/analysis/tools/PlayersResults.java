@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.analysis.tools;
@@ -28,7 +28,7 @@ public class PlayersResults extends JPanel implements AnalysisTool
             AnalysisToolCreator.analyseFactories.put("PlayersResults", Class.forName("jessx.analysis.tools.PlayersResults"));
             System.out.println("Players Results Analysis registered");
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             System.out.println("Problem registering PlayersResults tool: " + ex.toString());
         }
     }

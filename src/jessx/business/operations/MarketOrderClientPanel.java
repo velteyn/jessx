@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business.operations;
@@ -57,7 +57,7 @@ public class MarketOrderClientPanel extends JPanel implements ClientInputPanel
         try {
             this.jbInit();
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             e.printStackTrace();
         }
     }

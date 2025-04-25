@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.net;
@@ -45,7 +45,7 @@ public class PreConnectionClient
             this.output = socket.getOutputStream();
             this.input = socket.getInputStream();
         }
-        catch (IOException ex) {
+        catch (final IOException ex) {
             Utils.logger.error("Error while getting streams from the socket. " + ex.toString());
         }
     }
@@ -60,7 +60,7 @@ public class PreConnectionClient
                 Utils.logger.info(data);
             }
         }
-        catch (IOException ex1) {
+        catch (final IOException ex1) {
             this.loginFailed("Could not read the login from the client. Error: " + ex1.toString());
             return;
         }
@@ -86,7 +86,7 @@ public class PreConnectionClient
                 new DataOutputStream(this.output).writeUTF(String.valueOf(writer.getBuffer().toString()) + "[JessX-end]");
                 this.output.flush();
             }
-            catch (IOException ex2) {
+            catch (final IOException ex2) {
                 Utils.logger.error("Something fails when sending back the accepted message to the client: " + ex2.toString());
             }
             return;
@@ -104,7 +104,7 @@ public class PreConnectionClient
             this.output.close();
             this.input.close();
         }
-        catch (IOException ex) {
+        catch (final IOException ex) {
             Utils.logger.error("Could not send to the client his login failed. " + ex.toString());
         }
     }

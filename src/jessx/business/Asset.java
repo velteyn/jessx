@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business;
@@ -83,7 +83,7 @@ public abstract class Asset implements XmlExportable, XmlLoadable
         try {
             asset = AssetCreator.createAsset(assetType);
         }
-        catch (AssetNotCreatedException ex) {
+        catch (final AssetNotCreatedException ex) {
             Utils.logger.error("Asset type not found on server: " + ex.toString());
             return null;
         }

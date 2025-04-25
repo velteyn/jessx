@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.analysis;
@@ -90,7 +90,7 @@ public class AnalysisToolsCore
                             AnalysisToolsCore.logger.debug("bad file not .jar :" + fileList[i]);
                         }
                     }
-                    catch (Exception ex1) {
+                    catch (final Exception ex1) {
                         AnalysisToolsCore.logger.debug("Error while loading analysis module: " + ex1.toString());
                         ex1.printStackTrace();
                     }
@@ -108,7 +108,7 @@ public class AnalysisToolsCore
             AnalysisToolsCore.logger.debug("Getting look and feel...");
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             AnalysisToolsCore.logger.fatal("Error: " + e.toString());
             e.printStackTrace();
         }

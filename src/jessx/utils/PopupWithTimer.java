@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.utils;
@@ -70,7 +70,7 @@ public class PopupWithTimer extends Thread
                 }
             }
         }
-        catch (InterruptedException ex) {
+        catch (final InterruptedException ex) {
             this.parentComponent.setFocusable(true);
             this.dialog.hide();
         }

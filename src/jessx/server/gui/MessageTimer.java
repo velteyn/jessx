@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -94,7 +94,7 @@ public class MessageTimer extends Thread
                     }
                 }
             }
-            catch (InterruptedException ex1) {
+            catch (final InterruptedException ex1) {
                 Utils.logger.warn("MessageTimer sleep interrupted. " + ex1.toString());
             }
         }

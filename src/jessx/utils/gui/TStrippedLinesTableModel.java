@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.utils.gui;
@@ -11,12 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class TStrippedLinesTableModel extends DefaultTableModel implements Constants
 {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 8302896578728793552L;
-
-	public TStrippedLinesTableModel(final Object[] columnNames, final int rowCount) {
+    public TStrippedLinesTableModel(final Object[] columnNames, final int rowCount) {
         super(columnNames, rowCount);
     }
     

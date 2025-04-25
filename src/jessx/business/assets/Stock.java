@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business.assets;
@@ -16,7 +16,7 @@ public class Stock extends Asset
             System.out.println("Loading stock...");
             AssetCreator.assetFactories.put("Stock", Class.forName("jessx.business.assets.Stock"));
         }
-        catch (ClassNotFoundException exception) {
+        catch (final ClassNotFoundException exception) {
             System.out.println("Unabled to locate the Stock class. Reason: bad class name spelling.");
             exception.printStackTrace();
         }

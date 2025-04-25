@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -40,7 +40,7 @@ public class ServerTimer extends Thread
             try {
                 Thread.sleep(1000L);
             }
-            catch (InterruptedException ex) {
+            catch (final InterruptedException ex) {
                 Utils.logger.warn("ServerTimer sleep interrupted. " + ex.toString());
             }
         }

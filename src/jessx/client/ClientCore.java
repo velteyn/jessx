@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.client;
@@ -150,7 +150,7 @@ public abstract class ClientCore
     
     public static void removeNetworkListener(final NetworkListener listener) {
         Utils.logger.debug("Removing a network listener from all classes it was registered for.");
-        for ( Object key : ClientCore.networkListener.keySet()) {
+        for (final Object key :   ClientCore.networkListener.keySet()) {
             removeNetworkListener(listener, (String) key);
         }
     }

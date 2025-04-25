@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -23,7 +23,7 @@ public class TableModelDividendSetup extends AbstractTableModel implements Divid
         try {
             this.jbInit();
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             ex.printStackTrace();
         }
     }
@@ -90,7 +90,7 @@ public class TableModelDividendSetup extends AbstractTableModel implements Divid
             final Dividend div = (Dividend) this.dividendDistribution.newInstance();
             return div;
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             Utils.logger.error("Failed to create dividend object from the class given to the constructor.");
             Utils.logger.error("error: " + ex.toString());
             Utils.logger.error("Will return a NormalDividend instead of a " + this.dividendDistribution.toString());

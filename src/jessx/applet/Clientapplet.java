@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.applet;
@@ -36,13 +36,13 @@ public class Clientapplet extends JApplet
         try {
             this.username = this.getParameter("user", "Your Name");
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             e.printStackTrace();
         }
         try {
             this.userpwd = this.getParameter("password", "");
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             e.printStackTrace();
         }
         final ImageIcon[] images = { new ImageIcon(this.getImage(this.getCodeBase(), "images/logo_JessX_small.PNG")), new ImageIcon(this.getImage(this.getCodeBase(), "images/ecllogo_small.PNG")), new ImageIcon(this.getImage(this.getCodeBase(), "images/ustl_small.PNG")), new ImageIcon(this.getImage(this.getCodeBase(), "images/ecoxp_small.PNG")), new ImageIcon(this.getImage(this.getCodeBase(), "images/logo_trading.PNG")), new ImageIcon(this.getImage(this.getCodeBase(), "images/market_logo.PNG")) };
@@ -66,7 +66,7 @@ public class Clientapplet extends JApplet
             }
             in.close();
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             zoneTexte.append("\n" + e.toString() + "\n");
             System.out.println("fichier non trouv\u00e9");
         }

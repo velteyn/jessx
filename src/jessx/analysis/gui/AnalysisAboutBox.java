@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.analysis.gui;
@@ -33,7 +33,7 @@ public class AnalysisAboutBox extends AbstractAboutBox
                 this.getModulesInfoTextArea().append("- " + tempTool.getToolName() + "\nBy " + tempTool.getToolAuthor() + "\n" + tempTool.getToolDescription() + "\n\n");
                 AnalysisToolsCore.logger.debug("following tool added to about box: " + tempTool.getToolName());
             }
-            catch (AnalysisToolNotCreatedException ex1) {
+            catch (final AnalysisToolNotCreatedException ex1) {
                 ex1.printStackTrace();
             }
         }

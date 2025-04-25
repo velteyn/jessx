@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.gclient.gui;
@@ -45,7 +45,7 @@ public class NewMessageTimer extends Thread
             Thread.sleep(300L);
             this.jtextArea.setBackground(UIManager.getColor("Button.background"));
         }
-        catch (InterruptedException ex) {
+        catch (final InterruptedException ex) {
             Utils.logger.warn("NewMessageTimer sleep interrupted. " + ex.toString());
             this.jtextArea.setBackground(UIManager.getColor("Button.background"));
         }

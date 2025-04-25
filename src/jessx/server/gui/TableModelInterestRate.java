@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -22,7 +22,7 @@ public class TableModelInterestRate extends AbstractTableModel implements XmlExp
     public TableModelInterestRate() {
         this.interestRate = new Vector<Float>();
         this.cellEditable = true;
-        this.columnNames = new String[] { "Period nÂ° ", "Interest Rate (%) " };
+        this.columnNames = new String[] { "Period n° ", "Interest Rate (%) " };
         this.interestRate.setSize(1);
         this.interestRate.setElementAt(0.0f, 0);
     }

@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.analysis.gui;
@@ -85,7 +85,7 @@ public class CoreFrame extends JFrame implements Constants
             AnalysisToolsCore.logger.debug("Frame initialization...");
             this.jbInit();
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             AnalysisToolsCore.logger.fatal("Something went wrong during frame initialisation: " + e.toString());
             e.printStackTrace();
         }
@@ -153,7 +153,7 @@ public class CoreFrame extends JFrame implements Constants
                 AnalysisToolsCore.logger.debug("following tool added to interface: " + tempTool.getToolName());
                 ++toolNum;
             }
-            catch (AnalysisToolNotCreatedException ex1) {
+            catch (final AnalysisToolNotCreatedException ex1) {
                 ex1.printStackTrace();
             }
         }
@@ -214,12 +214,12 @@ public class CoreFrame extends JFrame implements Constants
             AnalysisToolsCore.logger.debug("Reading the xml file...");
             xmlLog = sax.build(file);
         }
-        catch (JDOMException ex) {
+        catch (final JDOMException ex) {
             AnalysisToolsCore.logger.fatal("Something went wrong during reading: " + ex.toString() + ". Stopping analyse process.");
             JOptionPane.showMessageDialog(this, "The file you choose is incorrect.", "Error", 2);
             return;
         }
-        catch (IOException ex2) {
+        catch (final IOException ex2) {
             AnalysisToolsCore.logger.fatal("Something went wrong during reading: " + ex2.toString() + ". Stopping analyse process.");
             ex2.printStackTrace();
             return;
@@ -240,7 +240,7 @@ public class CoreFrame extends JFrame implements Constants
                     AnalysisToolsCore.logger.debug("Analysing the xml with the following tool: " + tempTool.getToolName());
                     tempTabbedPane.add(tempTool.drawGraph(), tempTool.getToolName());
                 }
-                catch (AnalysisToolNotCreatedException ex3) {
+                catch (final AnalysisToolNotCreatedException ex3) {
                     AnalysisToolsCore.logger.fatal("Something went wrong when trying to use to following tool: " + key + ": " + ex3.toString());
                     ex3.printStackTrace();
                 }
@@ -248,7 +248,7 @@ public class CoreFrame extends JFrame implements Constants
             this.jTabbedPane.add(tempTabbedPane, "Analysis " + (this.jTabbedPane.getTabCount() + 1));
             this.jTabbedPane.setSelectedIndex(this.jTabbedPane.getTabCount() - 1);
         }
-        catch (Exception ex4) {
+        catch (final Exception ex4) {
             JOptionPane.showMessageDialog(this, "File incorrect for those analysis : " + ex4.toString() + " " + ex4.getCause(), "error", 2);
         }
     }
@@ -281,11 +281,11 @@ public class CoreFrame extends JFrame implements Constants
             AnalysisToolsCore.logger.debug("Got the xml document.");
             new XMLExportation(xmlLog, this);
         }
-        catch (JDOMException ex) {
+        catch (final JDOMException ex) {
             AnalysisToolsCore.logger.error("Something went wrong during reading: " + ex.toString() + ". Stopping analyse process.");
             JOptionPane.showMessageDialog(this, "The file you choose is incorrect.", "Error", 2);
         }
-        catch (IOException ex2) {
+        catch (final IOException ex2) {
             AnalysisToolsCore.logger.error("Something went wrong during reading: " + ex2.toString() + ". Stopping analyse process.");
             ex2.printStackTrace();
             JOptionPane.showMessageDialog(this, "The file you choose is incorrect.", "Error", 2);

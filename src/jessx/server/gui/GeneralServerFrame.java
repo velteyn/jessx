@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -172,7 +172,7 @@ public class GeneralServerFrame extends JFrame implements Constants, PlayerTypeL
         try {
             this.jbInit();
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             ex.printStackTrace();
         }
         final Iterator iter = BusinessCore.getScenario().getPlayerTypes().keySet().iterator();
@@ -405,7 +405,7 @@ public class GeneralServerFrame extends JFrame implements Constants, PlayerTypeL
                 this.hasAlreadySaved = true;
             }
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             Utils.logger.error("Error while saving xml document. " + ex.toString());
             JOptionPane.showConfirmDialog(this, "Error occured during writing of the xml document:\n" + ex.toString(), "Error: unable to write xml document", 2, 0);
         }
@@ -418,7 +418,7 @@ public class GeneralServerFrame extends JFrame implements Constants, PlayerTypeL
                 sortie.output(this.createExperimentSetupXmlDocument(), new FileOutputStream(new File(String.valueOf(BusinessCore.getGeneralParameters().getWorkingDirectory()) + "\\" + BusinessCore.getGeneralParameters().getLoggingFileName().substring(0, BusinessCore.getGeneralParameters().getLoggingFileName().lastIndexOf(" Log")) + ".xml")));
                 JOptionPane.showMessageDialog(this, "The file has been saved correctly.", "Save", 1);
             }
-            catch (IOException ex) {
+            catch (final IOException ex) {
                 System.out.print("Error when the file is created...\n" + ex.toString());
             }
         }
@@ -464,7 +464,7 @@ public class GeneralServerFrame extends JFrame implements Constants, PlayerTypeL
             this.setTitle("JessX server 1.6 - " + chooser.getSelectedFile().getAbsolutePath());
             this.hasAlreadySaved = true;
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             Utils.logger.error("Error reading the xml file: " + ex.toString());
             JOptionPane.showMessageDialog(this, "The file you choose is incorrect.", "Error", 2);
             return;
@@ -524,9 +524,9 @@ public class GeneralServerFrame extends JFrame implements Constants, PlayerTypeL
         final int tempIT = this.treeModel.zitDiscreetITServerGui.getJSliderFrequency();
         for (int i = 0; i < this.treeModel.zitDiscreetServerGui.getJSpinnerNumberOfRobots(); ++i) {
             final Robot zitDiscreet = new Discreet(i, temp);
-            System.out.println("in for, after creating the discreet "+ i +" and before start");
+            System.out.println("dans for, apr\u00e8s cr\u00e9ation du discreet " + i + " et avant start");
             zitDiscreet.start();
-            System.out.println("after discreet start " + i);
+            System.out.println("apr\u00e8s start du discreet " + i);
         }
         for (int i = 0; i < this.treeModel.zitDiscreetITServerGui.getJSpinnerNumberOfRobots(); ++i) {
             final Robot zitDiscreetIT = new DiscreetIT(i, tempIT);
@@ -558,11 +558,11 @@ public class GeneralServerFrame extends JFrame implements Constants, PlayerTypeL
             final Process p = Runtime.getRuntime().exec("rundll32 SHELL32.DLL,ShellExec_RunDLL " + file.getAbsolutePath());
             p.waitFor();
         }
-        catch (IOException ex1) {
+        catch (final IOException ex1) {
             JOptionPane.showConfirmDialog(this, "An error occured with the tutorial.\nGo to our web site to see it.", "JessX Server", 0, 0);
             Utils.logger.error("ERROR with File help");
         }
-        catch (InterruptedException ex2) {
+        catch (final InterruptedException ex2) {
             JOptionPane.showConfirmDialog(this, "An error occured with the tutorial.\nGo to our web site to see it.", "JessX Server", 0, 0);
             Utils.logger.error("ERROR with File help");
         }

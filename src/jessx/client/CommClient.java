@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.client;
@@ -42,23 +42,23 @@ class CommClient extends Thread
             ClientCore.fireConnectionStateChanged(this.state = newState);
         }
     }
-  //EDOARDO CONNECT SOURCE
+    
     public void connect(final String hostName, final String login, final String password) throws IOException {
         try {
             Utils.logger.debug("Getting the socket to the server...");
             this.socket = new Socket(InetAddress.getByName(hostName), Integer.parseInt(Utils.appsProperties.getProperty("ServerWaitingPort")));
         }
-        catch (UnknownHostException ex4) {
+        catch (final UnknownHostException ex) {
             Utils.logger.error("Host " + hostName + " unknown. Connection aborted. Retry with an other hostname.");
             return;
         }
-        catch (NumberFormatException ex) {
-            Utils.logger.fatal("Could not connect: property ServerWaitingPort in client.properties is not an integer: " + ex.toString());
-            throw ex;
-        }
-        catch (IOException ex2) {
-            Utils.logger.fatal("IOError while trying to connect to server: " + ex2.toString());
+        catch (final NumberFormatException ex2) {
+            Utils.logger.fatal("Could not connect: property ServerWaitingPort in client.properties is not an integer: " + ex2.toString());
             throw ex2;
+        }
+        catch (final IOException ex3) {
+            Utils.logger.fatal("IOError while trying to connect to server: " + ex3.toString());
+            throw ex3;
         }
         this.setState(1);
         try {
@@ -68,8 +68,8 @@ class CommClient extends Thread
             this.output = this.socket.getOutputStream();
             this.dataOutput = new DataOutputStream(this.output);
         }
-        catch (IOException ex3) {
-            Utils.logger.error("Error getting streams from the socket: " + ex3.toString() + ". try to reconnect later.");
+        catch (final IOException ex4) {
+            Utils.logger.error("Error getting streams from the socket: " + ex4.toString() + ". try to reconnect later.");
             return;
         }
         final String javaversion = System.getProperty("java.version");
@@ -90,7 +90,7 @@ class CommClient extends Thread
                 Utils.logger.debug("Waiting for data...");
                 dataRemaining = this.readXmlFromNetwork(String.valueOf(dataRemaining) + this.dataInput.readUTF());
             }
-            catch (IOException ex) {
+            catch (final IOException ex) {
                 Utils.logger.error("Error reading input stream: " + ex.toString());
                 this.setState(0);
             }
@@ -112,8 +112,8 @@ class CommClient extends Thread
                 Utils.logger.debug(message);
                 this.fireObjectReceived(sax.build(new StringReader(message)));
             }
-            catch (IOException ex2) {}
-            catch (JDOMException ex) {
+            catch (final IOException ex2) {}
+            catch (final JDOMException ex) {
                 Utils.logger.error("Could not read message : " + message + ". Error: " + ex.toString());
             }
             return this.readXmlFromNetwork(data.substring(end + "[JessX-end]".length()));
@@ -135,7 +135,7 @@ class CommClient extends Thread
             this.dataOutput.flush();
             Utils.logger.debug("Output done successfully.");
         }
-        catch (IOException ex) {
+        catch (final IOException ex) {
             Utils.logger.error("Unable to write to output streams: " + ex.toString());
         }
     }

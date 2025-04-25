@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.utils.gui;
@@ -105,7 +105,7 @@ public abstract class AbstractAboutBox extends JDialog implements ActionListener
         try {
             this.jbInit();
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             e.printStackTrace();
         }
     }
@@ -194,7 +194,7 @@ public abstract class AbstractAboutBox extends JDialog implements ActionListener
             license = new JEditorPane(new URL("file:" + directory + "GNU GENERAL PUBLIC LICENSE.txt"));
             license.setEditable(false);
         }
-        catch (IOException ex1) {
+        catch (final IOException ex1) {
             Utils.logger.error("GNU GENERAL PUBLIC LICENSE.txt not found.");
             license.setText("No text found. The file GNU GENERAL PUBLIC LICENSE.txt is absent.\nWrite to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA to receive a copy of the GNU General Public License.");
         }

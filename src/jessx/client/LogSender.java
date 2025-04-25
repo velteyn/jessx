@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.client;
@@ -51,7 +51,7 @@ public class LogSender implements Runnable
                 Utils.logger.debug("done.");
             }
         }
-        catch (IOException ex) {
+        catch (final IOException ex) {
             Utils.logger.debug(ex.getMessage());
         }
     }

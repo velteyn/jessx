@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.agent;
@@ -42,7 +42,7 @@ public abstract class Agent extends Thread implements ExperimentDeveloppmentList
             final String pass = Agent.agentProperties.getProperty("password");
             ClientCore.connecToServer(host, String.valueOf(user) + (int)(Math.random() * 10000.0), pass);
         }
-        catch (IOException ex) {
+        catch (final IOException ex) {
             System.out.println(ex.getMessage());
         }
     }
@@ -143,7 +143,7 @@ public abstract class Agent extends Thread implements ExperimentDeveloppmentList
                 }
                 Thread.sleep(this.pauseDuration);
             }
-            catch (InterruptedException ex) {
+            catch (final InterruptedException ex) {
                 JesseAgentApps.getLogger().warn(ex.getMessage());
             }
         }
@@ -218,7 +218,7 @@ public abstract class Agent extends Thread implements ExperimentDeveloppmentList
                     try {
                         Thread.sleep(500L);
                     }
-                    catch (InterruptedException ex) {
+                    catch (final InterruptedException ex) {
                         JesseAgentApps.getLogger().warn(ex.getMessage());
                     }
                 }

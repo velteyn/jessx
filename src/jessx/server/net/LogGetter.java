@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.net;
@@ -48,11 +48,11 @@ public class LogGetter
             final Socket socket = new Socket(ip, this.port);
             in = new BufferedInputStream(socket.getInputStream());
         }
-        catch (UnknownHostException ex) {
+        catch (final UnknownHostException ex) {
             Utils.logger.error(ex.getMessage());
             return;
         }
-        catch (IOException ex2) {
+        catch (final IOException ex2) {
             Utils.logger.error(ex2.getMessage());
             return;
         }
@@ -64,7 +64,7 @@ public class LogGetter
             file.createNewFile();
             out = new BufferedOutputStream(new FileOutputStream(file));
         }
-        catch (IOException ex3) {
+        catch (final IOException ex3) {
             Utils.logger.error(ex3.getMessage());
             return;
         }
@@ -76,7 +76,7 @@ public class LogGetter
                 out.flush();
             }
         }
-        catch (IOException ex4) {
+        catch (final IOException ex4) {
             Utils.logger.error(ex4.getMessage());
         }
         Utils.logger.debug("- closing socket and file...");
@@ -84,7 +84,7 @@ public class LogGetter
             out.close();
             in.close();
         }
-        catch (IOException ex5) {
+        catch (final IOException ex5) {
             Utils.logger.error(ex5.getMessage());
             return;
         }

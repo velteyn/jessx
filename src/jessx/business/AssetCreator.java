@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business;
@@ -18,19 +18,19 @@ public abstract class AssetCreator
     public static Asset createAsset(final String name) throws AssetNotCreatedException {
         Utils.logger.info("Trying to create the following asset: " + name);
         Utils.logger.debug("Looking for its class in the Hashtable.");
-        Class assetClass = (Class) AssetCreator.assetFactories.get(name);
+        Class assetClass = (Class) assetFactories.get(name);
         if (assetClass == null) {
             Utils.logger.debug("Class not found. The asset has never been loaded.");
             Utils.logger.debug("As all assets from the modules/assets directory has already been loaded, we are looking in the classPath.");
             try {
                 Class.forName("jessx.business.assets." + name);
-                assetClass = (Class) AssetCreator.assetFactories.get(name);
+                assetClass = (Class) assetFactories.get(name);
                 if (assetClass == null) {
                     Utils.logger.warn("Asset not found in the classPath.");
                     throw new AssetNotCreatedException();
                 }
             }
-            catch (ClassNotFoundException e) {
+            catch (final ClassNotFoundException e) {
                 Utils.logger.warn("Asset not found in the classPath.");
                 throw new AssetNotCreatedException();
             }
@@ -39,12 +39,12 @@ public abstract class AssetCreator
         try {
             return (Asset) assetClass.newInstance();
         }
-        catch (IllegalAccessException ex) {
+        catch (final IllegalAccessException ex) {
             Utils.logger.error("error creating the requested asset: " + ex.toString());
             ex.printStackTrace();
             return null;
         }
-        catch (InstantiationException ex2) {
+        catch (final InstantiationException ex2) {
             Utils.logger.error("error creating the requested asset: " + ex2.toString());
             ex2.printStackTrace();
             return null;

@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.gclient.gui;
@@ -47,7 +47,7 @@ public class ConnectionPopup implements Constants
                 addressField.setText(host);
                 Utils.logger.debug("done.");
             }
-            catch (Exception e) {
+            catch (final Exception e) {
                 Utils.logger.error("Unable to load login configuration file : " + settingsFile);
             }
         }
@@ -90,14 +90,14 @@ public class ConnectionPopup implements Constants
                     p2.store(new FileOutputStream(settingsFile), "Login information");
                     Utils.logger.debug("done.");
                 }
-                catch (Exception e2) {
+                catch (final Exception e2) {
                     Utils.logger.error("Error while writing login configuration file : " + settingsFile);
                 }
             }
             try {
                 ClientCore.connecToServer(host, login2, password);
             }
-            catch (IOException ex) {
+            catch (final IOException ex) {
                 Utils.logger.warn("java version : " + System.getProperty("java.version"));
                 JOptionPane.showMessageDialog(parentFrame, "Connection to server failed. Check host, IP and route.");
             }

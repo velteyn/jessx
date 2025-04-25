@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -51,7 +51,7 @@ public class TableModelMessages extends AbstractTableModel
                 return "Receivers";
             }
             case 2: {
-                return "Period nÂ°";
+                return "Period n°";
             }
             case 3: {
                 return "Time(s)";

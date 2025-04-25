@@ -1,324 +1,329 @@
+// 
+// Decompiled by Procyon v0.6.0
+// 
+
 package jessx.business;
 
-import java.util.HashMap;
+import jessx.business.event.PortfolioEvent;
+import org.jdom.Content;
+import jessx.utils.Utils;
+import org.jdom.Element;
+import jessx.business.event.PortfolioListener;
 import java.util.Iterator;
 import java.util.Vector;
-import jessx.business.event.PortfolioEvent;
-import jessx.business.event.PortfolioListener;
+import java.util.HashMap;
 import jessx.net.NetworkReadable;
 import jessx.net.NetworkWritable;
-import jessx.utils.Utils;
-import jessx.utils.XmlExportable;
 import jessx.utils.XmlLoadable;
-import org.jdom.Content;
-import org.jdom.Element;
+import jessx.utils.XmlExportable;
 
-public class Portfolio implements XmlExportable, XmlLoadable, NetworkWritable, NetworkReadable {
-  private float cash;
-  
-  private float nonInvestedCash;
-  
-  public Portfolio() {
-    try {
-      jbInit();
-    } catch (Exception ex) {
-      ex.printStackTrace();
-    } 
-  }
-  
-  private HashMap investedCash = new HashMap<Object, Object>();
-  
-  private HashMap ownings = new HashMap<Object, Object>();
-  
-  private HashMap nonInvestedOwnings = new HashMap<Object, Object>();
-  
-  private HashMap investedOwnings = new HashMap<Object, Object>();
-  
-  private Vector listeners = new Vector();
-  
-  public HashMap getOwnings() {
-    return this.ownings;
-  }
-  
-  public int getOwnings(String assetName) {
-    return ((Integer)this.ownings.get(assetName)).intValue();
-  }
-  
-  public HashMap getNonInvestedOwnings() {
-    return this.nonInvestedOwnings;
-  }
-  
-  public void setCash(float cash) {
-    if (cash != this.cash) {
-      this.cash = cash;
-      fireCashUpdated();
-    } 
-  }
-  
-  public void setNonInvestedCash(float nonInvestedCash) {
-    this.nonInvestedCash = nonInvestedCash;
-  }
-  
-  public void setNonInvestedOwnings(HashMap nonInvestedOwnings) {
-    this.nonInvestedOwnings = (HashMap)nonInvestedOwnings.clone();
-  }
-  
-  public float getCash() {
-    return this.cash;
-  }
-  
-  public float getNonInvestedCash() {
-    return this.nonInvestedCash;
-  }
-  
-  public float getInvestedCash(String institutionName) {
-    if (this.investedCash.containsKey(institutionName))
-      return ((Float)this.investedCash.get(institutionName)).floatValue(); 
-    return 0.0F;
-  }
-  
-  public int getInvestedOwnings(String institutionName) {
-    if (this.investedOwnings.containsKey(institutionName))
-      return ((Integer)this.investedOwnings.get(institutionName)).intValue(); 
-    return 0;
-  }
-  
-  public int getNonInvestedOwnings(String assetName) {
-    if (this.nonInvestedOwnings.containsKey(assetName))
-      return ((Integer)this.nonInvestedOwnings.get(assetName)).intValue(); 
-    return getOwnings(assetName);
-  }
-  
-  public void preInitializeInvestments() {
-    setNonInvestedCash(getCash());
-    Iterator<String> owningsIter = getOwnings().keySet().iterator();
-    while (owningsIter.hasNext()) {
-      String key = owningsIter.next();
-      setNonInvestedOwnings(key, getOwnings(key));
-    } 
-  }
-  
-  public void setInvestmentsWhenKeepingOrderBook(String institutionName, String assetName) {
-    if (this.investedCash.containsKey(institutionName))
-      addToNonInvestedCash(-getInvestedCash(institutionName)); 
-    if (this.nonInvestedOwnings.containsKey(assetName))
-      addToNonInvestedOwnings(-getInvestedOwnings(institutionName), assetName); 
-  }
-  
-  public void setInvestmentsWhenNotKeepingOrderBook(String institutionName) {
-    if (this.investedCash.containsKey(institutionName)) {
-      this.investedCash.put(institutionName, new Float(0.0F));
-      this.investedOwnings.put(institutionName, new Integer(0));
-    } 
-  }
-  
-  public void addToInvestedCash(float amount, String institutionName) {
-    this.investedCash.put(institutionName, new Float(getInvestedCash(institutionName) + amount));
-  }
-  
-  public void addToNonInvestedCash(float amount) {
-    setNonInvestedCash(getNonInvestedCash() + amount);
-  }
-  
-  public void addToInvestedOwnings(int quantity, String institutionName) {
-    this.investedOwnings.put(institutionName, new Integer(getInvestedOwnings(institutionName) + quantity));
-  }
-  
-  public void addToNonInvestedOwnings(int quantity, String assetName) {
-    this.nonInvestedOwnings.put(assetName, new Integer(getNonInvestedOwnings(assetName) + quantity));
-  }
-  
-  public void addToOwnings(int quantity, String assetName) {
-    this.ownings.put(assetName, new Integer(getOwnings(assetName) + quantity));
-  }
-  
-  public void addToCash(float amount) {
-    this.cash += amount;
-  }
-  
-  public void setOwnings(String assetName, int qtty) {
-    if (this.ownings.containsKey(assetName)) {
-      if (getOwnings(assetName) != qtty) {
-        this.ownings.put(assetName, new Integer(qtty));
-        fireAssetUpdated(assetName);
-      } 
-    } else {
-      this.ownings.put(assetName, new Integer(qtty));
-      fireAssetAdded(assetName);
-    } 
-  }
-  
-  public void setNonInvestedOwnings(String assetName, int qtty) {
-    this.nonInvestedOwnings.put(assetName, new Integer(qtty));
-  }
-  
-  public void removeAssetFromOwnings(String assetName) {
-    this.ownings.remove(assetName);
-    fireAssetRemoved(assetName);
-  }
-  
-  public Portfolio(float cash, HashMap ownings) {
-    setCash(cash);
-    Iterator<String> assetNameIterator = ownings.keySet().iterator();
-    while (assetNameIterator.hasNext()) {
-      String key = assetNameIterator.next();
-      setOwnings(key, ((Integer)ownings.get(key)).intValue());
-    } 
-  }
-  
-  public float operationCost(int quantity, float price, float percentageCost, float minimalCost) {
-    float proportionalCost = quantity * price * percentageCost / 100.0F;
-    return Math.max(minimalCost, proportionalCost);
-  }
-  
-  public void boughtAssets(String assetName, float amount, int quantity) {
-    addToCash(-amount);
-    addToNonInvestedCash(-amount);
-    addToOwnings(quantity, assetName);
-    addToNonInvestedOwnings(quantity, assetName);
-  }
-  
-  public void boughtAssetsInOrderBook(String assetName, float dealPrice, int quantity, String institutionName, float percentageCost, float minimalCost) {
-    addToCash(-quantity * dealPrice - 
-        operationCost(quantity, dealPrice, percentageCost, minimalCost));
-    addToNonInvestedCash(quantity * operationCost(1, dealPrice, percentageCost, minimalCost) - 
-        operationCost(quantity, dealPrice, percentageCost, minimalCost));
-    addToInvestedCash(-quantity * (dealPrice + quantity * operationCost(1, dealPrice, percentageCost, minimalCost)), institutionName);
-    addToOwnings(quantity, assetName);
-    addToNonInvestedOwnings(quantity, assetName);
-  }
-  
-  public void soldAssets(String assetName, float amount, int quantity) {
-    addToCash(amount);
-    addToNonInvestedCash(amount);
-    addToOwnings(-quantity, assetName);
-    addToNonInvestedOwnings(-quantity, assetName);
-  }
-  
-  public void soldAssetsInOrderBook(String assetName, float dealPrice, int quantity, String institutionName, float percentageCost, float minimalCost) {
-    addToCash(quantity * dealPrice - operationCost(quantity, dealPrice, percentageCost, minimalCost));
-    addToInvestedCash(-quantity * operationCost(1, dealPrice, percentageCost, minimalCost), institutionName);
-    addToNonInvestedCash(quantity * dealPrice + 
-        quantity * operationCost(1, dealPrice, percentageCost, minimalCost) - 
-        operationCost(quantity, dealPrice, percentageCost, minimalCost));
-    addToOwnings(-quantity, assetName);
-    addToInvestedOwnings(-quantity, institutionName);
-  }
-  
-  public void cancelOrder(int side, float price, int quantity, String assetName, String institutionName, float orderPercentageCost, float orderMinimalCost, float deletionPercentageCost, float deletionMinimalCost) {
-    setCash(getCash() - operationCost(quantity, price, deletionPercentageCost, deletionMinimalCost));
-    addToNonInvestedCash(side * price * quantity + 
-        quantity * operationCost(1, price, orderPercentageCost, orderMinimalCost) - 
-        operationCost(quantity, price, deletionPercentageCost, deletionMinimalCost));
-    addToInvestedCash(-side * price * quantity - 
-        quantity * operationCost(1, price, orderPercentageCost, orderMinimalCost), institutionName);
-    if (side == 0) {
-      addToNonInvestedOwnings(quantity, assetName);
-      addToInvestedOwnings(-quantity, institutionName);
-    } 
-  }
-  
-  public void wantedToBeBoughtAssets(float amount, String institutionName) {
-    addToNonInvestedCash(-amount);
-    addToInvestedCash(amount, institutionName);
-  }
-  
-  public void wantedToBeSoldAssets(float amount, int quantity, String assetName, String institutionName) {
-    addToNonInvestedCash(-amount);
-    addToInvestedCash(amount, institutionName);
-    addToNonInvestedOwnings(-quantity, assetName);
-    addToInvestedOwnings(quantity, institutionName);
-  }
-  
-  public float payDividend(String assetName, float dividend) {
-    setCash(getCash() + getOwnings(assetName) * dividend);
-    return getOwnings(assetName) * dividend;
-  }
-  
-  public void addListener(PortfolioListener listener) {
-    if (!this.listeners.contains(listener));
-    this.listeners.add(listener);
-  }
-  
-  public void removeListener(PortfolioListener listener) {
-    this.listeners.remove(listener);
-  }
-  
-  public void saveToXml(Element node) {
-    Utils.logger.debug("Saving portfolio to xml...");
-    node.setAttribute("cash", Float.toString(getCash()));
-    Iterator<String> owningsIter = getOwnings().keySet().iterator();
-    while (owningsIter.hasNext()) {
-      String key = owningsIter.next();
-      node.addContent((Content)(new Element("Owning"))
-          .setAttribute("asset", key)
-          .setAttribute("qtty", 
-            Integer.toString(getOwnings(key))));
-    } 
-  }
-  
-  public void loadFromXml(Element node) {
-    Utils.logger.debug("Loading portfolio from xml...");
-    String cash = node.getAttributeValue("cash");
-    if (cash == null) {
-      Utils.logger.error("Invalid xml portfolio node: attribute cash not found.");
-      return;
-    } 
-    setCash(Float.parseFloat(cash));
-    Iterator<Element> owningsIter = node.getChildren("Owning").iterator();
-    while (owningsIter.hasNext()) {
-      Element owning = owningsIter.next();
-      String asset = owning.getAttributeValue("asset");
-      String qtty = owning.getAttributeValue("qtty");
-      if (asset == null || qtty == null) {
-        Utils.logger.error("Invalid owning xml node: attributes asset and/or qtty not found.");
-        return;
-      } 
-      setOwnings(asset, Integer.parseInt(qtty));
-    } 
-  }
-  
-  public Object clone() {
-    return new Portfolio(this.cash, this.ownings);
-  }
-  
-  public Element prepareForNetworkOutput(String pt) {
-    Element rootPortfolio = new Element("Portfolio");
-    saveToXml(rootPortfolio);
-    return rootPortfolio;
-  }
-  
-  public boolean initFromNetworkInput(Element rootNode) {
-    loadFromXml(rootNode);
-    return true;
-  }
-  
-  private void fireAssetUpdated(String assetName) {
-    for (int i = 0; i < this.listeners.size(); i++)
-      ((PortfolioListener)this.listeners.elementAt(i))
-        .portfolioModified(new PortfolioEvent(assetName, 
-            1)); 
-  }
-  
-  private void fireCashUpdated() {
-    for (int i = 0; i < this.listeners.size(); i++)
-      ((PortfolioListener)this.listeners.elementAt(i))
-        .portfolioModified(new PortfolioEvent(0)); 
-  }
-  
-  private void fireAssetAdded(String assetName) {
-    for (int i = 0; i < this.listeners.size(); i++)
-      ((PortfolioListener)this.listeners.elementAt(i))
-        .portfolioModified(new PortfolioEvent(assetName, 
-            2)); 
-  }
-  
-  private void fireAssetRemoved(String assetName) {
-    for (int i = 0; i < this.listeners.size(); i++)
-      ((PortfolioListener)this.listeners.elementAt(i))
-        .portfolioModified(new PortfolioEvent(assetName, 
-            3)); 
-  }
-  
-  private void jbInit() throws Exception {}
+public class Portfolio implements XmlExportable, XmlLoadable, NetworkWritable, NetworkReadable
+{
+    private float cash;
+    private float nonInvestedCash;
+    private HashMap investedCash;
+    private HashMap ownings;
+    private HashMap nonInvestedOwnings;
+    private HashMap investedOwnings;
+    private Vector listeners;
+    
+    public Portfolio() {
+        this.investedCash = new HashMap();
+        this.ownings = new HashMap();
+        this.nonInvestedOwnings = new HashMap();
+        this.investedOwnings = new HashMap();
+        this.listeners = new Vector();
+        try {
+            this.jbInit();
+        }
+        catch (final Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    
+    public HashMap getOwnings() {
+        return this.ownings;
+    }
+    
+    public int getOwnings(final String assetName) {
+        return (Integer) this.ownings.get(assetName);
+    }
+    
+    public HashMap getNonInvestedOwnings() {
+        return this.nonInvestedOwnings;
+    }
+    
+    public void setCash(final float cash) {
+        if (cash != this.cash) {
+            this.cash = cash;
+            this.fireCashUpdated();
+        }
+    }
+    
+    public void setNonInvestedCash(final float nonInvestedCash) {
+        this.nonInvestedCash = nonInvestedCash;
+    }
+    
+    public void setNonInvestedOwnings(final HashMap nonInvestedOwnings) {
+        this.nonInvestedOwnings = (HashMap)nonInvestedOwnings.clone();
+    }
+    
+    public float getCash() {
+        return this.cash;
+    }
+    
+    public float getNonInvestedCash() {
+        return this.nonInvestedCash;
+    }
+    
+    public float getInvestedCash(final String institutionName) {
+        if (this.investedCash.containsKey(institutionName)) {
+            return (float) this.investedCash.get(institutionName);
+        }
+        return 0.0f;
+    }
+    
+    public int getInvestedOwnings(final String institutionName) {
+        if (this.investedOwnings.containsKey(institutionName)) {
+            return (int) this.investedOwnings.get(institutionName);
+        }
+        return 0;
+    }
+    
+    public int getNonInvestedOwnings(final String assetName) {
+        if (this.nonInvestedOwnings.containsKey(assetName)) {
+            return (int) this.nonInvestedOwnings.get(assetName);
+        }
+        return this.getOwnings(assetName);
+    }
+    
+    public void preInitializeInvestments() {
+        this.setNonInvestedCash(this.getCash());
+
+        Iterator owningsIter = this.getOwnings().keySet().iterator();
+        while(owningsIter.hasNext()) {
+                String key = (String)owningsIter.next();
+                this.setNonInvestedOwnings(key, this.getOwnings(key));
+        }
+    }
+    
+    public void setInvestmentsWhenKeepingOrderBook(final String institutionName, final String assetName) {
+        if (this.investedCash.containsKey(institutionName)) {
+            this.addToNonInvestedCash(-this.getInvestedCash(institutionName));
+        }
+        if (this.nonInvestedOwnings.containsKey(assetName)) {
+            this.addToNonInvestedOwnings(-this.getInvestedOwnings(institutionName), assetName);
+        }
+    }
+    
+    public void setInvestmentsWhenNotKeepingOrderBook(final String institutionName) {
+        if (this.investedCash.containsKey(institutionName)) {
+            this.investedCash.put(institutionName, new Float(0.0f));
+            this.investedOwnings.put(institutionName, new Integer(0));
+        }
+    }
+    
+    public void addToInvestedCash(final float amount, final String institutionName) {
+        this.investedCash.put(institutionName, new Float(this.getInvestedCash(institutionName) + amount));
+    }
+    
+    public void addToNonInvestedCash(final float amount) {
+        this.setNonInvestedCash(this.getNonInvestedCash() + amount);
+    }
+    
+    public void addToInvestedOwnings(final int quantity, final String institutionName) {
+        this.investedOwnings.put(institutionName, new Integer(this.getInvestedOwnings(institutionName) + quantity));
+    }
+    
+    public void addToNonInvestedOwnings(final int quantity, final String assetName) {
+        this.nonInvestedOwnings.put(assetName, new Integer(this.getNonInvestedOwnings(assetName) + quantity));
+    }
+    
+    public void addToOwnings(final int quantity, final String assetName) {
+        this.ownings.put(assetName, new Integer(this.getOwnings(assetName) + quantity));
+    }
+    
+    public void addToCash(final float amount) {
+        this.cash += amount;
+    }
+    
+    public void setOwnings(final String assetName, final int qtty) {
+        if (this.ownings.containsKey(assetName)) {
+            if (this.getOwnings(assetName) != qtty) {
+                this.ownings.put(assetName, new Integer(qtty));
+                this.fireAssetUpdated(assetName);
+            }
+        }
+        else {
+            this.ownings.put(assetName, new Integer(qtty));
+            this.fireAssetAdded(assetName);
+        }
+    }
+    
+    public void setNonInvestedOwnings(final String assetName, final int qtty) {
+        this.nonInvestedOwnings.put(assetName, new Integer(qtty));
+    }
+    
+    public void removeAssetFromOwnings(final String assetName) {
+        this.ownings.remove(assetName);
+        this.fireAssetRemoved(assetName);
+    }
+    
+    public Portfolio(final float cash, final HashMap ownings) {
+        this.investedCash = new HashMap();
+        this.ownings = new HashMap();
+        this.nonInvestedOwnings = new HashMap();
+        this.investedOwnings = new HashMap();
+        this.listeners = new Vector();
+        this.setCash(cash);
+        Iterator assetNameIterator = ownings.keySet().iterator();
+        while(assetNameIterator.hasNext()) {
+          String key = (String)assetNameIterator.next();
+            this.setOwnings(key, (Integer) ownings.get(key));
+        }
+    }
+    
+    public float operationCost(final int quantity, final float price, final float percentageCost, final float minimalCost) {
+        final float proportionalCost = quantity * price * percentageCost / 100.0f;
+        return Math.max(minimalCost, proportionalCost);
+    }
+    
+    public void boughtAssets(final String assetName, final float amount, final int quantity) {
+        this.addToCash(-amount);
+        this.addToNonInvestedCash(-amount);
+        this.addToOwnings(quantity, assetName);
+        this.addToNonInvestedOwnings(quantity, assetName);
+    }
+    
+    public void boughtAssetsInOrderBook(final String assetName, final float dealPrice, final int quantity, final String institutionName, final float percentageCost, final float minimalCost) {
+        this.addToCash(-quantity * dealPrice - this.operationCost(quantity, dealPrice, percentageCost, minimalCost));
+        this.addToNonInvestedCash(quantity * this.operationCost(1, dealPrice, percentageCost, minimalCost) - this.operationCost(quantity, dealPrice, percentageCost, minimalCost));
+        this.addToInvestedCash(-quantity * (dealPrice + quantity * this.operationCost(1, dealPrice, percentageCost, minimalCost)), institutionName);
+        this.addToOwnings(quantity, assetName);
+        this.addToNonInvestedOwnings(quantity, assetName);
+    }
+    
+    public void soldAssets(final String assetName, final float amount, final int quantity) {
+        this.addToCash(amount);
+        this.addToNonInvestedCash(amount);
+        this.addToOwnings(-quantity, assetName);
+        this.addToNonInvestedOwnings(-quantity, assetName);
+    }
+    
+    public void soldAssetsInOrderBook(final String assetName, final float dealPrice, final int quantity, final String institutionName, final float percentageCost, final float minimalCost) {
+        this.addToCash(quantity * dealPrice - this.operationCost(quantity, dealPrice, percentageCost, minimalCost));
+        this.addToInvestedCash(-quantity * this.operationCost(1, dealPrice, percentageCost, minimalCost), institutionName);
+        this.addToNonInvestedCash(quantity * dealPrice + quantity * this.operationCost(1, dealPrice, percentageCost, minimalCost) - this.operationCost(quantity, dealPrice, percentageCost, minimalCost));
+        this.addToOwnings(-quantity, assetName);
+        this.addToInvestedOwnings(-quantity, institutionName);
+    }
+    
+    public void cancelOrder(final int side, final float price, final int quantity, final String assetName, final String institutionName, final float orderPercentageCost, final float orderMinimalCost, final float deletionPercentageCost, final float deletionMinimalCost) {
+        this.setCash(this.getCash() - this.operationCost(quantity, price, deletionPercentageCost, deletionMinimalCost));
+        this.addToNonInvestedCash(side * price * quantity + quantity * this.operationCost(1, price, orderPercentageCost, orderMinimalCost) - this.operationCost(quantity, price, deletionPercentageCost, deletionMinimalCost));
+        this.addToInvestedCash(-side * price * quantity - quantity * this.operationCost(1, price, orderPercentageCost, orderMinimalCost), institutionName);
+        if (side == 0) {
+            this.addToNonInvestedOwnings(quantity, assetName);
+            this.addToInvestedOwnings(-quantity, institutionName);
+        }
+    }
+    
+    public void wantedToBeBoughtAssets(final float amount, final String institutionName) {
+        this.addToNonInvestedCash(-amount);
+        this.addToInvestedCash(amount, institutionName);
+    }
+    
+    public void wantedToBeSoldAssets(final float amount, final int quantity, final String assetName, final String institutionName) {
+        this.addToNonInvestedCash(-amount);
+        this.addToInvestedCash(amount, institutionName);
+        this.addToNonInvestedOwnings(-quantity, assetName);
+        this.addToInvestedOwnings(quantity, institutionName);
+    }
+    
+    public float payDividend(final String assetName, final float dividend) {
+        this.setCash(this.getCash() + this.getOwnings(assetName) * dividend);
+        return this.getOwnings(assetName) * dividend;
+    }
+    
+    public void addListener(final PortfolioListener listener) {
+        if (!this.listeners.contains(listener)) {}
+        this.listeners.add(listener);
+    }
+    
+    public void removeListener(final PortfolioListener listener) {
+        this.listeners.remove(listener);
+    }
+    
+    public void saveToXml(final Element node) {
+        Utils.logger.debug("Saving portfolio to xml...");
+        node.setAttribute("cash", Float.toString(this.getCash()));
+        Iterator owningsIter = this.getOwnings().keySet().iterator();
+        while(owningsIter.hasNext()) {
+          String key = (String)owningsIter.next();
+            node.addContent(new Element("Owning").setAttribute("asset", key).setAttribute("qtty", Integer.toString(this.getOwnings(key))));
+        }
+    }
+    
+    public void loadFromXml(final Element node) {
+        Utils.logger.debug("Loading portfolio from xml...");
+        final String cash = node.getAttributeValue("cash");
+        if (cash == null) {
+            Utils.logger.error("Invalid xml portfolio node: attribute cash not found.");
+            return;
+        }
+        this.setCash(Float.parseFloat(cash));
+        Iterator owningsIter = node.getChildren("Owning").iterator();
+        while (owningsIter.hasNext()) {
+          Element owning = (Element)owningsIter.next();
+            final String asset = owning.getAttributeValue("asset");
+            final String qtty = owning.getAttributeValue("qtty");
+            if (asset == null || qtty == null) {
+                Utils.logger.error("Invalid owning xml node: attributes asset and/or qtty not found.");
+                return;
+            }
+            this.setOwnings(asset, Integer.parseInt(qtty));
+        }
+    }
+    
+    public Object clone() {
+        return new Portfolio(this.cash, this.ownings);
+    }
+    
+    public Element prepareForNetworkOutput(final String pt) {
+        final Element rootPortfolio = new Element("Portfolio");
+        this.saveToXml(rootPortfolio);
+        return rootPortfolio;
+    }
+    
+    public boolean initFromNetworkInput(final Element rootNode) {
+        this.loadFromXml(rootNode);
+        return true;
+    }
+    
+    private void fireAssetUpdated(final String assetName) {
+        for (int i = 0; i < this.listeners.size(); ++i) {
+            ((PortfolioListener) this.listeners.elementAt(i)).portfolioModified(new PortfolioEvent(assetName, 1));
+        }
+    }
+    
+    private void fireCashUpdated() {
+        for (int i = 0; i < this.listeners.size(); ++i) {
+            ((PortfolioListener) this.listeners.elementAt(i)).portfolioModified(new PortfolioEvent(0));
+        }
+    }
+    
+    private void fireAssetAdded(final String assetName) {
+        for (int i = 0; i < this.listeners.size(); ++i) {
+            ((PortfolioListener) this.listeners.elementAt(i)).portfolioModified(new PortfolioEvent(assetName, 2));
+        }
+    }
+    
+    private void fireAssetRemoved(final String assetName) {
+        for (int i = 0; i < this.listeners.size(); ++i) {
+            ((PortfolioListener) this.listeners.elementAt(i)).portfolioModified(new PortfolioEvent(assetName, 3));
+        }
+    }
+    
+    private void jbInit() throws Exception {
+    }
 }

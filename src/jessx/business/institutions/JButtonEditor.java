@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business.institutions;
@@ -38,7 +38,7 @@ class JButtonEditor extends AbstractCellEditor implements TableCellEditor, Actio
                 deleteOrder.setInstitutionName(order.getInstitutionName());
                 ClientCore.send(deleteOrder);
             }
-            catch (Exception ex) {
+            catch (final Exception ex) {
                 ex.printStackTrace();
             }
         }

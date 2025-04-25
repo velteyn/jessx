@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business;
@@ -27,7 +27,7 @@ public abstract class OperationCreator
                     throw new OperationNotCreatedException();
                 }
             }
-            catch (ClassNotFoundException e) {
+            catch (final ClassNotFoundException e) {
                 Utils.logger.warn("operation not found in the classPath.");
                 throw new OperationNotCreatedException();
             }
@@ -35,12 +35,12 @@ public abstract class OperationCreator
         try {
             return (Operation) operationClass.newInstance();
         }
-        catch (IllegalAccessException ex) {
+        catch (final IllegalAccessException ex) {
             Utils.logger.error("error creating the requested operation: " + ex.toString());
             ex.printStackTrace();
             throw new OperationNotCreatedException();
         }
-        catch (InstantiationException ex2) {
+        catch (final InstantiationException ex2) {
             Utils.logger.error("error creating the requested operation: " + ex2.toString());
             ex2.printStackTrace();
             throw new OperationNotCreatedException();

@@ -1,34 +1,34 @@
+// 
+// Decompiled by Procyon v0.6.0
+// 
+
 package jessx.gclient.gui;
 
-import java.awt.Dimension;
-import java.awt.Font; // Importa la classe Font
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-
-import javax.swing.BorderFactory;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.border.Border;
-import javax.swing.border.TitledBorder;
-
-import jessx.utils.Constants;
+import javax.swing.table.TableCellRenderer;
 import jessx.utils.gui.JLabelRenderer;
+import java.awt.Component;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import java.awt.LayoutManager;
+import java.awt.Dimension;
+import javax.swing.border.TitledBorder;
+import javax.swing.BorderFactory;
+import javax.swing.table.TableModel;
+import javax.swing.JTable;
+import java.awt.GridBagLayout;
+import javax.swing.border.Border;
+import javax.swing.JScrollPane;
+import jessx.utils.Constants;
+import javax.swing.JPanel;
 
-public class ManagedAssets extends JPanel implements Constants {
-    /**
-     *
-     */
-    private static final long serialVersionUID = 6278989316181107908L;
+public class ManagedAssets extends JPanel implements Constants
+{
     JScrollPane ScrollPaneManagedAssets;
     Border border1;
     PortfolioTableModel tableJTable2Model;
     GridBagLayout gridBagLayoutManagedAssets;
     JTable TableManagedAssets;
-
-    public static final Font FONT_CLIENT_TITLE_BORDER = new Font("NomeFont", Font.BOLD, 12); // Inizializzazione statica
-
+    
     public ManagedAssets() {
         this.ScrollPaneManagedAssets = new JScrollPane();
         this.tableJTable2Model = new PortfolioTableModel(new String[] { "Asset Name", " Quantity" });
@@ -36,7 +36,7 @@ public class ManagedAssets extends JPanel implements Constants {
         this.TableManagedAssets = new JTable(this.tableJTable2Model);
         this.jbInit();
     }
-
+    
     public void jbInit() {
         this.border1 = new TitledBorder(BorderFactory.createEmptyBorder(6, 6, 6, 6), "My Portfolio", 0, 0, ManagedAssets.FONT_CLIENT_TITLE_BORDER);
         this.setEnabled(true);
@@ -49,7 +49,7 @@ public class ManagedAssets extends JPanel implements Constants {
         this.ScrollPaneManagedAssets.setHorizontalScrollBarPolicy(30);
         this.ScrollPaneManagedAssets.setAutoscrolls(false);
         this.ScrollPaneManagedAssets.setRequestFocusEnabled(true);
-        this.ScrollPaneManagedAssets.setViewportView(this.TableManagedAssets);
+        this.ScrollPaneManagedAssets.getViewport().add(this.TableManagedAssets, null);
         this.TableManagedAssets.setRowSelectionAllowed(false);
         this.TableManagedAssets.getColumnModel().getColumn(0).setCellRenderer(new JLabelRenderer());
         this.TableManagedAssets.getColumnModel().getColumn(1).setCellRenderer(new JLabelRenderer());

@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server.gui;
@@ -54,7 +54,7 @@ public class AssetServerGenericGui extends JPanel implements DisplayableNode, Ac
         try {
             this.jbInit();
         }
-        catch (Exception e) {
+        catch (final Exception e) {
             e.printStackTrace();
         }
         BusinessCore.addAssetListener(this);
@@ -210,7 +210,7 @@ public class AssetServerGenericGui extends JPanel implements DisplayableNode, Ac
             newAsset.setAssetName(name);
             BusinessCore.addAsset(newAsset);
         }
-        catch (AssetNotCreatedException ex) {
+        catch (final AssetNotCreatedException ex) {
             Utils.logger.error("Unable to add an asset: " + ex.toString());
             JOptionPane.showMessageDialog(null, "Unable to add the asset: " + name + "'.", "Exception during the addition of the asset", 2);
             ex.printStackTrace();

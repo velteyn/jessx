@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.server;
@@ -66,7 +66,7 @@ public class LogManager implements ExperimentStateListener
             Utils.logger.debug("Saving xml setup file to : " + pwd + fileName);
             Utils.saveXmlDocument(String.valueOf(pwd) + fileName, this.experimentDoc);
         }
-        catch (Exception ex) {
+        catch (final Exception ex) {
             Utils.logger.error("Error while saving xml document. " + ex.toString());
             JOptionPane.showConfirmDialog(null, "Error occured during writing of the xml document:\n" + ex.toString(), "Error: unable to write xml document", 2, 0);
         }

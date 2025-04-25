@@ -1,5 +1,5 @@
 // 
-//This program is free software; GNU license ; USE AT YOUR RISK , WITHOUT ANY WARRANTY
+// Decompiled by Procyon v0.6.0
 // 
 
 package jessx.business.operations;
@@ -19,6 +19,6 @@ class Main_jButtonSendOrder_actionAdapter implements ActionListener
         try {
             this.adaptee.jButtonSendOrder_actionPerformed(e);
         }
-        catch (Exception ex) {}
+        catch (final Exception ex) {}
     }
 }
