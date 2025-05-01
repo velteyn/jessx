@@ -55,35 +55,35 @@ public class ClientExperimentManager implements NetworkListener
                 return;
             }
             switch (update.getUpdateType()) {
-                case 5: {
+                case ExpUpdate.EXPERIMENT_ON: {
                     this.setExperimentState(1);
                     this.fireExperimentBegins();
                     break;
                 }
-                case 4: {
+                case ExpUpdate.EXPERIMENT_OFF: {
                     this.setExperimentState(0);
                     break;
                 }
-                case 0: {
+                case ExpUpdate.EXPERIMENT_BEGINNING: {
                     this.setExperimentState(1);
                     this.fireExperimentBegins();
                     break;
                 }
-                case 1: {
+                case ExpUpdate.EXPERIMENT_FINISHING: {
                     this.setExperimentState(0);
                     this.fireExperimentEnds();
                     break;
                 }
-                case 2: {
+                case ExpUpdate.PERIOD_BEGINNING: {
                     ++this.currentPeriod;
-                    this.currentPeriodDuration = Integer.parseInt(update.getUpdateMessage());
+                    currentPeriodDuration = Integer.parseInt(((ExpUpdate)update).getUpdateMessage());
                     this.syncDate = new Date();
                     this.currentPeriod = update.getCurrentPeriod();
-                    this.setExperimentState(2);
+                    this.setExperimentState(EXP_ON_PER_ON);
                     this.firePeriodBegins();
                     break;
                 }
-                case 3: {
+                case ExpUpdate.PERIOD_FINISHING: {
                     this.setExperimentState(1);
                     this.firePeriodEnds();
                     break;

@@ -1,254 +1,428 @@
-// 
-// Decompiled by Procyon v0.6.0
-// 
-
 package jessx.business.operations;
 
-import jessx.net.NetworkWritable;
-import jessx.client.ClientCore;
-import java.awt.event.ActionEvent;
-import javax.swing.JFormattedTextField;
-import javax.swing.text.DefaultFormatter;
-import java.text.Format;
-import javax.swing.text.NumberFormatter;
-import javax.swing.text.DefaultFormatterFactory;
-import java.text.NumberFormat;
-import javax.swing.SpinnerModel;
-import java.awt.Component;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import jessx.utils.Constants;
-import java.awt.event.ActionListener;
-import java.awt.Font;
-import java.awt.Color;
-import javax.swing.SpinnerNumberModel;
-import java.awt.Dimension;
-import java.awt.LayoutManager;
-import java.awt.GridBagLayout;
-import javax.swing.JButton;
-import javax.swing.JToggleButton;
-import javax.swing.JSpinner;
-import javax.swing.JLabel;
-import jessx.business.ClientInputPanel;
-import javax.swing.JPanel;
+/***************************************************************/
+/*                     SOFTWARE SECTION                        */
+/***************************************************************/
+/*
+ * <p>Name: Jessx</p>
+ * <p>Description: Financial Market Simulation Software</p>
+ * <p>Licence: GNU General Public License</p>
+ * <p>Organisation: EC Lille / USTL</p>
+ * <p>Persons involved in the project : group T.E.A.M.</p>
+ * <p>More details about this source code at :
+ *    http://eleves.ec-lille.fr/~ecoxp03  </p>
+ * <p>Current version: 1.0</p>
+ */
 
-public class MarketOrderClientPanel extends JPanel implements ClientInputPanel
-{
-    JLabel jLabelQuantityTransaction;
-    JSpinner jSpinnerQuantity;
-    JToggleButton jToggleButtonBuyMarketOrder;
-    JToggleButton jToggleButtonSellMarketOrder;
-    JButton jButtonSendOrderMarketOrder;
-    GridBagLayout gridBagLayout1;
-    JPanel jPanel1;
-    GridBagLayout gridBagLayout2;
-    private String institution;
-    
-    public MarketOrderClientPanel(final String institution) {
-        this.jLabelQuantityTransaction = new JLabel();
-        this.jSpinnerQuantity = new JSpinner();
-        this.jToggleButtonBuyMarketOrder = new JToggleButton();
-        this.jToggleButtonSellMarketOrder = new JToggleButton();
-        this.jButtonSendOrderMarketOrder = new JButton();
-        this.gridBagLayout1 = new GridBagLayout();
-        this.jPanel1 = new JPanel();
-        this.gridBagLayout2 = new GridBagLayout();
-        this.institution = institution;
-        try {
-            this.jbInit();
-        }
-        catch (final Exception e) {
-            e.printStackTrace();
-        }
+/***************************************************************/
+/*                      LICENCE SECTION                        */
+/***************************************************************/
+/*
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */
+
+/***************************************************************/
+/*                       IMPORT SECTION                        */
+/***************************************************************/
+
+import java.text.*;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.text.*;
+
+import jessx.business.*;
+import jessx.client.*;
+import jessx.utils.*;
+
+/***************************************************************/
+/*          MarketOrderClientPanel CLASS SECTION               */
+/***************************************************************/
+/**
+ * <p>Title : MarketOrderClientPanel</p>
+ * <p>Description : </p>
+ * @author Christophe Grosjean
+ * @version 1.0
+ */
+
+public class MarketOrderClientPanel extends JPanel implements ClientInputPanel {
+
+  JLabel jLabelQuantityTransaction = new JLabel();
+  JSpinner jSpinnerQuantity = new JSpinner();
+  JToggleButton jToggleButtonBuyMarketOrder = new JToggleButton();
+  JToggleButton jToggleButtonSellMarketOrder = new JToggleButton();
+  JButton jButtonSendOrderMarketOrder = new JButton();
+  GridBagLayout gridBagLayout1 = new GridBagLayout();
+  JPanel jPanel1 = new JPanel();
+  GridBagLayout gridBagLayout2 = new GridBagLayout();
+
+  private String institution;
+
+  public MarketOrderClientPanel(String institution) {
+    this.institution = institution;
+    try {
+      jbInit();
     }
-    
-    public JPanel getPanel() {
-        return this;
+    catch(Exception e) {
+      e.printStackTrace();
     }
-    
-    public void stopEdition() {
-        this.jToggleButtonBuyMarketOrder.setEnabled(false);
-        this.jToggleButtonSellMarketOrder.setEnabled(false);
-        this.jButtonSendOrderMarketOrder.setEnabled(false);
+  }
+
+  public JPanel getPanel() {
+    return this;
+  }
+
+  public void stopEdition() {
+    jToggleButtonBuyMarketOrder.setEnabled(false);
+    jToggleButtonSellMarketOrder.setEnabled(false);
+    jButtonSendOrderMarketOrder.setEnabled(false);
+  }
+
+  public void startEdition() {
+    jToggleButtonBuyMarketOrder.setEnabled(true);
+    jToggleButtonSellMarketOrder.setEnabled(true);
+  }
+
+  private void jbInit() {
+    this.setLayout(gridBagLayout1);
+
+
+
+    jLabelQuantityTransaction.setText("Quantity :");
+
+    jSpinnerQuantity.setMinimumSize(new Dimension(70, 20));
+    jSpinnerQuantity.setPreferredSize(new Dimension(70, 20));
+    setIntegerSpinnerProperties( jSpinnerQuantity, new SpinnerNumberModel(1, 1, 999, 1) );
+
+    jToggleButtonBuyMarketOrder.setBackground(new java.awt.Color(145, 255, 200));
+    jToggleButtonBuyMarketOrder.setEnabled(false);
+    jToggleButtonBuyMarketOrder.setFont(new java.awt.Font("Lucida Console", 0, 14));
+    jToggleButtonBuyMarketOrder.setDoubleBuffered(false);
+    jToggleButtonBuyMarketOrder.setMaximumSize(new Dimension(68, 30));
+    jToggleButtonBuyMarketOrder.setMinimumSize(new Dimension(68, 30));
+    jToggleButtonBuyMarketOrder.setOpaque(true);
+    jToggleButtonBuyMarketOrder.setPreferredSize(new Dimension(68, 30));
+    jToggleButtonBuyMarketOrder.setActionCommand("Bid");
+    jToggleButtonBuyMarketOrder.setMnemonic(KeyEvent.VK_B);
+    jToggleButtonBuyMarketOrder.setText("Buy");
+    jToggleButtonBuyMarketOrder.addActionListener(new ClientFrame_jToggleButtonBuyMarketOrder_actionAdapter(this));
+    jToggleButtonSellMarketOrder.setBackground(new java.awt.Color(13, 219, 242));
+
+    jToggleButtonSellMarketOrder.setEnabled(false);
+    jToggleButtonSellMarketOrder.setFont(new java.awt.Font("Lucida Console", 0, 14));
+    jToggleButtonSellMarketOrder.setMaximumSize(new Dimension(68, 30));
+    jToggleButtonSellMarketOrder.setMinimumSize(new Dimension(68, 30));
+    jToggleButtonSellMarketOrder.setOpaque(true);
+    jToggleButtonSellMarketOrder.setPreferredSize(new Dimension(68, 30));
+    jToggleButtonSellMarketOrder.setActionCommand("Ask");
+    jToggleButtonSellMarketOrder.setMnemonic(KeyEvent.VK_S);
+    jToggleButtonSellMarketOrder.setText("Sell");
+    jToggleButtonSellMarketOrder.addActionListener(new ClientFrame_jToggleButtonSellMarketOrder_actionAdapter(this));
+
+    jButtonSendOrderMarketOrder.setBackground(Constants.CLIENT_EXECUTE_INACTIVE);
+    jButtonSendOrderMarketOrder.setEnabled(false);
+    jButtonSendOrderMarketOrder.setFont(new java.awt.Font("Lucida Console", 1, 14));
+    jButtonSendOrderMarketOrder.setForeground(Color.red);
+    jButtonSendOrderMarketOrder.setMaximumSize(new Dimension(95, 30));
+    jButtonSendOrderMarketOrder.setMinimumSize(new Dimension(95, 30));
+    jButtonSendOrderMarketOrder.setPreferredSize(new Dimension(95, 30));
+    jButtonSendOrderMarketOrder.setActionCommand("Send");
+    jButtonSendOrderMarketOrder.setMnemonic(KeyEvent.VK_E);
+    jButtonSendOrderMarketOrder.setText("Execute");
+    jButtonSendOrderMarketOrder.addActionListener(new Principale_jButtonSendOrderMarketOrder_actionAdapter(this));
+    jPanel1.setLayout(gridBagLayout2);
+    this.add(jLabelQuantityTransaction,               new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(3, 6, 6, 3), 0, 0));
+    this.add(jSpinnerQuantity,          new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(3, 3, 6, 3), 0, 0));
+    this.add(jPanel1,        new GridBagConstraints(2, 0, 1, 2, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 0, 0, 0), 0, 0));
+    jPanel1.add(jToggleButtonBuyMarketOrder,            new GridBagConstraints(0, 1, 1, 1, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(3, 3, 6, 3), 0, 0));
+    jPanel1.add(jToggleButtonSellMarketOrder,     new GridBagConstraints(0, 0, 1, 1, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(6, 3, 3, 3), 0, 0));
+    jPanel1.add(jButtonSendOrderMarketOrder,      new GridBagConstraints(1, 0, 1, 2, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(6, 3, 6, 6), 0, 0));
+
+
+
+  }
+
+  /**
+   * @author Franck P
+   * @param spinner JSpinner
+   * @param model SpinnerNumberModel
+   * forbids non-numeric input and sets the model of the spinner
+   */
+  private void setCurrencySpinnerProperties (JSpinner spinner, SpinnerNumberModel model) {
+
+    if (model != null) {
+      spinner.setModel(model);
     }
-    
-    public void startEdition() {
-        this.jToggleButtonBuyMarketOrder.setEnabled(true);
-        this.jToggleButtonSellMarketOrder.setEnabled(true);
+
+    JFormattedTextField spinnerTextField = ((JSpinner.DefaultEditor)spinner.getEditor()).getTextField();
+
+    NumberFormat nf = NumberFormat.getInstance ();
+    nf.setMaximumFractionDigits(2);
+    nf.setMinimumFractionDigits(2);
+
+
+    DefaultFormatterFactory factory = (DefaultFormatterFactory) spinnerTextField.getFormatterFactory();
+    NumberFormatter formatter = (NumberFormatter) factory.getDefaultFormatter();
+    formatter.setFormat(nf);
+
+    ((DefaultFormatter) spinnerTextField.getFormatter ()).setAllowsInvalid (false);
+
+  }
+
+  /**
+   * @author Franck P
+   * @param spinner JSpinner
+   * @param model SpinnerNumberModel
+   * forbids non-numeric input and sets the model of the spinner
+   */
+  private void setIntegerSpinnerProperties (JSpinner spinner, SpinnerNumberModel model) {
+
+    if (model != null) {
+      spinner.setModel(model);
     }
-    
-    private void jbInit() {
-        this.setLayout(this.gridBagLayout1);
-        this.jLabelQuantityTransaction.setText("Quantity :");
-        this.jSpinnerQuantity.setMinimumSize(new Dimension(70, 20));
-        this.jSpinnerQuantity.setPreferredSize(new Dimension(70, 20));
-        this.setIntegerSpinnerProperties(this.jSpinnerQuantity, new SpinnerNumberModel(1, 1, 999, 1));
-        this.jToggleButtonBuyMarketOrder.setBackground(new Color(145, 255, 200));
-        this.jToggleButtonBuyMarketOrder.setEnabled(false);
-        this.jToggleButtonBuyMarketOrder.setFont(new Font("Verdana", 0, 14));
-        this.jToggleButtonBuyMarketOrder.setDoubleBuffered(false);
-        this.jToggleButtonBuyMarketOrder.setMaximumSize(new Dimension(68, 30));
-        this.jToggleButtonBuyMarketOrder.setMinimumSize(new Dimension(68, 30));
-        this.jToggleButtonBuyMarketOrder.setOpaque(true);
-        this.jToggleButtonBuyMarketOrder.setPreferredSize(new Dimension(68, 30));
-        this.jToggleButtonBuyMarketOrder.setActionCommand("Bid");
-        this.jToggleButtonBuyMarketOrder.setMnemonic(66);
-        this.jToggleButtonBuyMarketOrder.setText("Buy");
-        this.jToggleButtonBuyMarketOrder.addActionListener(new ClientFrame_jToggleButtonBuyMarketOrder_actionAdapter(this));
-        this.jToggleButtonSellMarketOrder.setBackground(new Color(13, 219, 242));
-        this.jToggleButtonSellMarketOrder.setEnabled(false);
-        this.jToggleButtonSellMarketOrder.setFont(new Font("Verdana", 0, 14));
-        this.jToggleButtonSellMarketOrder.setMaximumSize(new Dimension(68, 30));
-        this.jToggleButtonSellMarketOrder.setMinimumSize(new Dimension(68, 30));
-        this.jToggleButtonSellMarketOrder.setOpaque(true);
-        this.jToggleButtonSellMarketOrder.setPreferredSize(new Dimension(68, 30));
-        this.jToggleButtonSellMarketOrder.setActionCommand("Ask");
-        this.jToggleButtonSellMarketOrder.setMnemonic(83);
-        this.jToggleButtonSellMarketOrder.setText("Sell");
-        this.jToggleButtonSellMarketOrder.addActionListener(new ClientFrame_jToggleButtonSellMarketOrder_actionAdapter(this));
-        this.jButtonSendOrderMarketOrder.setBackground(Constants.CLIENT_EXECUTE_INACTIVE);
-        this.jButtonSendOrderMarketOrder.setEnabled(false);
-        this.jButtonSendOrderMarketOrder.setFont(new Font("Verdana", 1, 14));
-        this.jButtonSendOrderMarketOrder.setForeground(Color.red);
-        this.jButtonSendOrderMarketOrder.setMaximumSize(new Dimension(95, 30));
-        this.jButtonSendOrderMarketOrder.setMinimumSize(new Dimension(95, 30));
-        this.jButtonSendOrderMarketOrder.setPreferredSize(new Dimension(95, 30));
-        this.jButtonSendOrderMarketOrder.setActionCommand("Send");
-        this.jButtonSendOrderMarketOrder.setMnemonic(69);
-        this.jButtonSendOrderMarketOrder.setText("Execute");
-        this.jButtonSendOrderMarketOrder.addActionListener(new Principale_jButtonSendOrderMarketOrder_actionAdapter(this));
-        this.jPanel1.setLayout(this.gridBagLayout2);
-        this.add(this.jLabelQuantityTransaction, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, 10, 0, new Insets(3, 6, 6, 3), 0, 0));
-        this.add(this.jSpinnerQuantity, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, 10, 0, new Insets(3, 3, 6, 3), 0, 0));
-        this.add(this.jPanel1, new GridBagConstraints(2, 0, 1, 2, 1.0, 0.0, 10, 2, new Insets(0, 0, 0, 0), 0, 0));
-        this.jPanel1.add(this.jToggleButtonBuyMarketOrder, new GridBagConstraints(0, 1, 1, 1, 1.0, 0.0, 10, 0, new Insets(3, 3, 6, 3), 0, 0));
-        this.jPanel1.add(this.jToggleButtonSellMarketOrder, new GridBagConstraints(0, 0, 1, 1, 1.0, 0.0, 10, 0, new Insets(6, 3, 3, 3), 0, 0));
-        this.jPanel1.add(this.jButtonSendOrderMarketOrder, new GridBagConstraints(1, 0, 1, 2, 1.0, 0.0, 10, 0, new Insets(6, 3, 6, 6), 0, 0));
+
+    JFormattedTextField spinnerTextField = ((JSpinner.DefaultEditor)spinner.getEditor()).getTextField();
+
+    NumberFormat nf = NumberFormat.getNumberInstance ();
+    nf.setParseIntegerOnly (true);
+
+    DefaultFormatterFactory factory = (DefaultFormatterFactory) spinnerTextField.getFormatterFactory();
+    NumberFormatter formatter = (NumberFormatter) factory.getDefaultFormatter();
+    formatter.setFormat(nf);
+
+    ((DefaultFormatter) spinnerTextField.getFormatter ()).setAllowsInvalid (false);
+
+  }
+
+  void jToggleButtonBuyMarketOrder_actionPerformed(ActionEvent e) {
+    if (this.jToggleButtonBuyMarketOrder.isSelected()) {
+      this.activateBuyButton();
+      this.desactivateSellButton();
     }
-    
-    private void setCurrencySpinnerProperties(final JSpinner spinner, final SpinnerNumberModel model) {
-        if (model != null) {
-            spinner.setModel(model);
-        }
-        final JFormattedTextField spinnerTextField = ((JSpinner.DefaultEditor)spinner.getEditor()).getTextField();
-        final NumberFormat nf = NumberFormat.getInstance();
-        nf.setMaximumFractionDigits(2);
-        nf.setMinimumFractionDigits(2);
-        final DefaultFormatterFactory factory = (DefaultFormatterFactory)spinnerTextField.getFormatterFactory();
-        final NumberFormatter formatter = (NumberFormatter)factory.getDefaultFormatter();
-        formatter.setFormat(nf);
-        ((DefaultFormatter)spinnerTextField.getFormatter()).setAllowsInvalid(false);
+    else {
+      this.desactivateBuyButton();
+      this.activateSellButton();
     }
-    
-    private void setIntegerSpinnerProperties(final JSpinner spinner, final SpinnerNumberModel model) {
-        if (model != null) {
-            spinner.setModel(model);
-        }
-        final JFormattedTextField spinnerTextField = ((JSpinner.DefaultEditor)spinner.getEditor()).getTextField();
-        final NumberFormat nf = NumberFormat.getNumberInstance();
-        nf.setParseIntegerOnly(true);
-        final DefaultFormatterFactory factory = (DefaultFormatterFactory)spinnerTextField.getFormatterFactory();
-        final NumberFormatter formatter = (NumberFormatter)factory.getDefaultFormatter();
-        formatter.setFormat(nf);
-        ((DefaultFormatter)spinnerTextField.getFormatter()).setAllowsInvalid(false);
+    this.activateExecuteButton();
+  }
+
+  void jToggleButtonSellMarketOrder_actionPerformed(ActionEvent e) {
+    if (this.jToggleButtonSellMarketOrder.isSelected()) {
+      this.desactivateBuyButton();
+      this.activateSellButton();
     }
-    
-    void jToggleButtonBuyMarketOrder_actionPerformed(final ActionEvent e) {
-        if (this.jToggleButtonBuyMarketOrder.isSelected()) {
-            this.activateBuyButton();
-            this.desactivateSellButton();
-        }
-        else {
-            this.desactivateBuyButton();
-            this.activateSellButton();
-        }
-        this.activateExecuteButton();
+    else {
+      this.activateBuyButton();
+      this.desactivateSellButton();
     }
-    
-    void jToggleButtonSellMarketOrder_actionPerformed(final ActionEvent e) {
-        if (this.jToggleButtonSellMarketOrder.isSelected()) {
-            this.desactivateBuyButton();
-            this.activateSellButton();
-        }
-        else {
-            this.activateBuyButton();
-            this.desactivateSellButton();
-        }
-        this.activateExecuteButton();
+    this.activateExecuteButton();
+
+  }
+
+  void desactivateSellButton() {
+    this.jToggleButtonSellMarketOrder.setSelected(false);
+    this.jToggleButtonSellMarketOrder.setFont(new Font("Lucida Console",Font.PLAIN,14));
+    this.jToggleButtonSellMarketOrder.setBackground(Constants.CLIENT_SELL_INACTIVE);
+  }
+
+  void desactivateBuyButton() {
+    this.jToggleButtonBuyMarketOrder.setSelected(false);
+    this.jToggleButtonBuyMarketOrder.setFont(new Font("Lucida Console",Font.PLAIN,14));
+    this.jToggleButtonBuyMarketOrder.setBackground(Constants.CLIENT_BUY_INACTIVE);
+
+  }
+
+  void desactivateExecuteButton() {
+    this.jButtonSendOrderMarketOrder.setEnabled(false);
+    this.jButtonSendOrderMarketOrder.setBackground(Constants.CLIENT_EXECUTE_INACTIVE);
+
+  }
+
+  void activateSellButton() {
+    this.jToggleButtonSellMarketOrder.setSelected(true);
+    this.jToggleButtonSellMarketOrder.setFont(new Font("Lucida Console",Font.BOLD,14));
+    this.jToggleButtonSellMarketOrder.setBackground(Constants.CLIENT_SELL_ACTIVE);
+    this.desactivateBuyButton();
+    this.activateExecuteButton();
+  }
+
+  void activateBuyButton() {
+    this.jToggleButtonBuyMarketOrder.setSelected(true);
+    this.jToggleButtonBuyMarketOrder.setFont(new Font("Lucida Console",Font.BOLD,14));
+    this.jToggleButtonBuyMarketOrder.setBackground(Constants.CLIENT_BUY_ACTIVE);
+    this.desactivateSellButton();
+    this.activateExecuteButton();
+  }
+
+  void activateExecuteButton() {
+    this.jButtonSendOrderMarketOrder.setEnabled(true);
+    this.jButtonSendOrderMarketOrder.setBackground(Constants.CLIENT_EXECUTE_ACTIVE);
+  }
+
+
+  void jButtonSendOrderMarketOrder_actionPerformed(ActionEvent e) {
+    MarketOrder marketOrder = new MarketOrder();
+    if (this.orderValid()) {
+      this.desactivateExecuteButton();
+
+      //if (this.jToggleButtonBuyMarketOrder.isSelected()) {
+      //  this.activateBuyButton();
+      //}
+      //else {
+      //  this.activateSellButton();
+      //}
+
+      //Previous version for correcting bugs about activated buttons
+      if (this.jToggleButtonBuyMarketOrder.isSelected()) {
+        marketOrder.setPrice(Float.MAX_VALUE);
+      } else {
+        marketOrder.setPrice(Float.MIN_VALUE);
+      }
+      marketOrder.setEmitter(ClientCore.getLogin());
+      marketOrder.setInstitutionName(institution);
+
+      marketOrder.setQuantity(Integer.parseInt(jSpinnerQuantity.getValue().
+                                              toString()));
+      marketOrder.setSide( (this.jToggleButtonBuyMarketOrder.isSelected()) ? Order.BID :
+                         Order.ASK);
+
+      ClientCore.send(marketOrder);
+
+      this.desactivateBuyButton();
+      this.desactivateSellButton();
+
     }
-    
-    void desactivateSellButton() {
-        this.jToggleButtonSellMarketOrder.setSelected(false);
-        this.jToggleButtonSellMarketOrder.setFont(new Font("Verdana", 0, 14));
-        this.jToggleButtonSellMarketOrder.setBackground(Constants.CLIENT_SELL_INACTIVE);
+       else {
+     //Prevents you to sell instead of buying if you have not cash enough to buy (when you click twice on "Execute")
     }
-    
-    void desactivateBuyButton() {
-        this.jToggleButtonBuyMarketOrder.setSelected(false);
-        this.jToggleButtonBuyMarketOrder.setFont(new Font("Verdana", 0, 14));
-        this.jToggleButtonBuyMarketOrder.setBackground(Constants.CLIENT_BUY_INACTIVE);
+  }
+
+
+
+  /*public boolean orderValid() {
+    float price =  Float.parseFloat(jSpinnerPrice.getValue().toString());
+    int qtty = Integer.parseInt(jSpinnerQuantity.getValue().toString());
+
+    float cash = ClientCore.getPortfolio().getCash();
+
+    String assetName = ClientCore.getInstitution(institution).getAssetName();
+    int assetsOwnedNumber = ClientCore.getPortfolio().getOwnings(assetName);
+
+    return ( (this.jToggleButtonBuyMarketOrder.isSelected()) ? (cash >= price*qtty) : (assetsOwnedNumber >= qtty));
+  }
+
+Previous version before //CBJ
+  */
+
+
+  public boolean orderValid() {
+    boolean response = true;
+
+    int qtty = Integer.parseInt(jSpinnerQuantity.getValue().toString());
+
+    String assetName = ClientCore.getInstitution(institution).getAssetName();
+
+    float operationMinimalCost = ClientCore.getInstitution(institution).getMinimalCost("Market Order");
+    float operationPercentageCost = ClientCore.getInstitution(institution).getPercentageCost("Market Order");
+
+
+    if (this.jToggleButtonBuyMarketOrder.isSelected()) {
+      float price = Float.MAX_VALUE;
+      /*if (ClientCore.getPortfolio().hasEnoughCashForBid(qtty, price, operationPercentageCost, operationMinimalCost)) {
+        ClientCore.getPortfolio().wantedToBeBoughtAsset(qtty, price, operationPercentageCost, operationMinimalCost, institution);
+      }
+      else {
+        String warnMessage = "You have not enough cash to afford all the bids you placed.";
+        ClientCore.send(new WarnForClient(warnMessage));
+        response = false;
+
+      }*/
+
+    //impossible (et trop complexe) de verifier la solvabilite du joueur
     }
-    
-    void desactivateExecuteButton() {
-        this.jButtonSendOrderMarketOrder.setEnabled(false);
-        this.jButtonSendOrderMarketOrder.setBackground(Constants.CLIENT_EXECUTE_INACTIVE);
+    else {
+      float price = Float.MIN_VALUE;
+      /*
+      if (!ClientCore.getPortfolio().hasEnoughAsset(assetName, qtty)) {
+      //ClientCore.getPortfolio().wantedToBeSoldAsset(assetName, qtty, price, operationPercentageCost, operationMinimalCost, institution);
+        String warnMessage = "You have not enough assets to afford all the asks you placed.";
+        ClientCore.send(new WarnForClient(warnMessage));
+        response = false;
+      }
+      */
     }
-    
-    void activateSellButton() {
-        this.jToggleButtonSellMarketOrder.setSelected(true);
-        this.jToggleButtonSellMarketOrder.setFont(new Font("Verdana", 1, 14));
-        this.jToggleButtonSellMarketOrder.setBackground(Constants.CLIENT_SELL_ACTIVE);
-        this.desactivateBuyButton();
-        this.activateExecuteButton();
-    }
-    
-    void activateBuyButton() {
-        this.jToggleButtonBuyMarketOrder.setSelected(true);
-        this.jToggleButtonBuyMarketOrder.setFont(new Font("Verdana", 1, 14));
-        this.jToggleButtonBuyMarketOrder.setBackground(Constants.CLIENT_BUY_ACTIVE);
-        this.desactivateSellButton();
-        this.activateExecuteButton();
-    }
-    
-    void activateExecuteButton() {
-        this.jButtonSendOrderMarketOrder.setEnabled(true);
-        this.jButtonSendOrderMarketOrder.setBackground(Constants.CLIENT_EXECUTE_ACTIVE);
-    }
-    
-    void jButtonSendOrderMarketOrder_actionPerformed(final ActionEvent e) {
-        final MarketOrder marketOrder = new MarketOrder();
-        if (this.orderValid()) {
-            this.desactivateExecuteButton();
-            if (this.jToggleButtonBuyMarketOrder.isSelected()) {
-                marketOrder.setPrice(Float.MAX_VALUE);
-            }
-            else {
-                marketOrder.setPrice(Float.MIN_VALUE);
-            }
-            marketOrder.setEmitter(ClientCore.getLogin());
-            marketOrder.setInstitutionName(this.institution);
-            marketOrder.setQuantity(Integer.parseInt(this.jSpinnerQuantity.getValue().toString()));
-            marketOrder.setSide(this.jToggleButtonBuyMarketOrder.isSelected() ? 1 : 0);
-            ClientCore.send(marketOrder);
-            this.desactivateBuyButton();
-            this.desactivateSellButton();
-        }
-    }
-    
-    public boolean orderValid() {
-        final boolean response = true;
-        final int qtty = Integer.parseInt(this.jSpinnerQuantity.getValue().toString());
-        final String assetName = ClientCore.getInstitution(this.institution).getAssetName();
-        final float operationMinimalCost = ClientCore.getInstitution(this.institution).getMinimalCost("Market Order");
-        final float operationPercentageCost = ClientCore.getInstitution(this.institution).getPercentageCost("Market Order");
-        if (this.jToggleButtonBuyMarketOrder.isSelected()) {
-            final float price = Float.MAX_VALUE;
-        }
-        return response;
-    }
-    
-    @Override
-    public String toString() {
-        return "Market Order";
-    }
+
+    return response;
+  }
+
+//New Version after CBJ
+//Prevents the player to sell more assets than he owns or buy more than he can
+
+  public String toString() {
+    return "Market Order";
+  }
+}
+
+/***************************************************************/
+/*                   EVENT CLASSES SECTION                     */
+/***************************************************************/
+class ClientFrame_jToggleButtonBuyMarketOrder_actionAdapter
+    implements java.awt.event.ActionListener {
+  MarketOrderClientPanel adaptee;
+
+  ClientFrame_jToggleButtonBuyMarketOrder_actionAdapter(MarketOrderClientPanel
+      adaptee) {
+    this.adaptee = adaptee;
+  }
+
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jToggleButtonBuyMarketOrder_actionPerformed(e);
+  }
+}
+
+class ClientFrame_jToggleButtonSellMarketOrder_actionAdapter
+    implements java.awt.event.ActionListener {
+  MarketOrderClientPanel adaptee;
+
+  ClientFrame_jToggleButtonSellMarketOrder_actionAdapter(MarketOrderClientPanel
+      adaptee) {
+    this.adaptee = adaptee;
+  }
+
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jToggleButtonSellMarketOrder_actionPerformed(e);
+  }
+}
+
+class Principale_jButtonSendOrderMarketOrder_actionAdapter
+    implements java.awt.event.ActionListener {
+  MarketOrderClientPanel adaptee;
+
+  Principale_jButtonSendOrderMarketOrder_actionAdapter(MarketOrderClientPanel
+      adaptee) {
+    this.adaptee = adaptee;
+  }
+
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButtonSendOrderMarketOrder_actionPerformed(e);
+  }
 }
