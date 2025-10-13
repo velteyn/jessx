@@ -14,10 +14,12 @@ The original website can be read on Internet Archive at https://web.archive.org/
 
 1) Start the server 
 2) On the server load the file SimBulSpec.xml 
-a) Host an Experiment
-b) Join the Bots
+  a) Host an Experiment
+  b) Join the Bots
+  c) Give any bot a type/cathegory
 5) Start the client
-a) Login with no password on localhost
+  a) Login with no password on localhost
+  b) On server give a type to the player
 7) On the server start the session
 8) On the client presso OK when you are ready
 9) Enjoy
